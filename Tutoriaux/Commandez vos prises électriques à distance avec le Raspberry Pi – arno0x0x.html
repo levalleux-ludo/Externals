@@ -1,0 +1,1483 @@
+<!DOCTYPE html>
+<!-- saved from url=(0055)https://arno0x0x.wordpress.com/2015/04/02/rf433-outlet/ -->
+<html lang="fr-FR"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="profile" href="http://gmpg.org/xfn/11">
+<link rel="pingback" href="https://arno0x0x.wordpress.com/xmlrpc.php">
+<title>Commandez vos prises électriques à distance avec le Raspberry Pi – arno0x0x</title>
+<link rel="dns-prefetch" href="https://s2.wp.com/">
+<link rel="dns-prefetch" href="https://s1.wp.com/">
+<link rel="dns-prefetch" href="https://s0.wp.com/">
+<link rel="dns-prefetch" href="https://fonts.googleapis.com/">
+<link rel="alternate" type="application/rss+xml" title="arno0x0x » Flux" href="https://arno0x0x.wordpress.com/feed/">
+<link rel="alternate" type="application/rss+xml" title="arno0x0x » Flux des commentaires" href="https://arno0x0x.wordpress.com/comments/feed/">
+<link rel="alternate" type="application/rss+xml" title="arno0x0x » Commandez vos prises électriques à distance avec le Raspberry Pi Flux des commentaires" href="https://arno0x0x.wordpress.com/2015/04/02/rf433-outlet/feed/">
+	<script async="" src="./Commandez vos prises électriques à distance avec le Raspberry Pi – arno0x0x_files/beacon.js"></script><script type="text/javascript" src="./Commandez vos prises électriques à distance avec le Raspberry Pi – arno0x0x_files/showad.js" async=""></script><script type="text/javascript">
+		/* <![CDATA[ */
+		function addLoadEvent(func) {
+			var oldonload = window.onload;
+			if (typeof window.onload != 'function') {
+				window.onload = func;
+			} else {
+				window.onload = function () {
+					oldonload();
+					func();
+				}
+			}
+		}
+		/* ]]> */
+	</script>
+			<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s0.wp.com\/wp-content\/mu-plugins\/wpcom-smileys\/twemoji\/2\/72x72\/","ext":".png","svgUrl":"https:\/\/s0.wp.com\/wp-content\/mu-plugins\/wpcom-smileys\/twemoji\/2\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/s1.wp.com\/wp-includes\/js\/wp-emoji-release.min.js?m=1473172720h&ver=4.6.1-RC1-38499"}};
+			!function(a,b,c){function d(a){var c,d,e,f,g,h=b.createElement("canvas"),i=h.getContext&&h.getContext("2d"),j=String.fromCharCode;if(!i||!i.fillText)return!1;switch(i.textBaseline="top",i.font="600 32px Arial",a){case"flag":return i.fillText(j(55356,56806,55356,56826),0,0),!(h.toDataURL().length<3e3)&&(i.clearRect(0,0,h.width,h.height),i.fillText(j(55356,57331,65039,8205,55356,57096),0,0),c=h.toDataURL(),i.clearRect(0,0,h.width,h.height),i.fillText(j(55356,57331,55356,57096),0,0),d=h.toDataURL(),c!==d);case"diversity":return i.fillText(j(55356,57221),0,0),e=i.getImageData(16,16,1,1).data,f=e[0]+","+e[1]+","+e[2]+","+e[3],i.fillText(j(55356,57221,55356,57343),0,0),e=i.getImageData(16,16,1,1).data,g=e[0]+","+e[1]+","+e[2]+","+e[3],f!==g;case"simple":return i.fillText(j(55357,56835),0,0),0!==i.getImageData(16,16,1,1).data[0];case"unicode8":return i.fillText(j(55356,57135),0,0),0!==i.getImageData(16,16,1,1).data[0];case"unicode9":return i.fillText(j(55358,56631),0,0),0!==i.getImageData(16,16,1,1).data[0]}return!1}function e(a){var c=b.createElement("script");c.src=a,c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var f,g,h,i;for(i=Array("simple","flag","unicode8","diversity","unicode9"),c.supports={everything:!0,everythingExceptFlag:!0},h=0;h<i.length;h++)c.supports[i[h]]=d(i[h]),c.supports.everything=c.supports.everything&&c.supports[i[h]],"flag"!==i[h]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[i[h]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(g=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",g,!1),a.addEventListener("load",g,!1)):(a.attachEvent("onload",g),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),f=c.source||{},f.concatemoji?e(f.concatemoji):f.wpemoji&&f.twemoji&&(e(f.twemoji),e(f.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script><script src="./Commandez vos prises électriques à distance avec le Raspberry Pi – arno0x0x_files/wp-emoji-release.min.js" type="text/javascript"></script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<link rel="stylesheet" id="all-css-0-1" href="./Commandez vos prises électriques à distance avec le Raspberry Pi – arno0x0x_files/saved_resource" type="text/css" media="all">
+<link rel="stylesheet" id="plane-fonts-css" href="./Commandez vos prises électriques à distance avec le Raspberry Pi – arno0x0x_files/css" type="text/css" media="all">
+<link rel="stylesheet" id="all-css-2-1" href="./Commandez vos prises électriques à distance avec le Raspberry Pi – arno0x0x_files/saved_resource(1)" type="text/css" media="all">
+<style id="plane-style-inline-css" type="text/css">
+.site-header { background-image: url(https://arno0x0x.files.wordpress.com/2015/03/cropped-landscape-111.jpg); }
+</style>
+<link rel="stylesheet" id="print-css-3-1" href="./Commandez vos prises électriques à distance avec le Raspberry Pi – arno0x0x_files/global-print.css" type="text/css" media="print">
+<link rel="stylesheet" id="all-css-4-1" href="./Commandez vos prises électriques à distance avec le Raspberry Pi – arno0x0x_files/saved_resource(2)" type="text/css" media="all">
+<script type="text/javascript" src="./Commandez vos prises électriques à distance avec le Raspberry Pi – arno0x0x_files/saved_resource(3)"></script>
+<link rel="stylesheet" id="all-css-0-2" href="./Commandez vos prises électriques à distance avec le Raspberry Pi – arno0x0x_files/style.css" type="text/css" media="all">
+<!--[if lt IE 8]>
+<link rel='stylesheet' id='highlander-comments-ie7-css'  href='https://s1.wp.com/wp-content/mu-plugins/highlander-comments/style-ie7.css?m=1351637563h&#038;ver=20110606' type='text/css' media='all' />
+<![endif]-->
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://arno0x0x.wordpress.com/xmlrpc.php?rsd">
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://s1.wp.com/wp-includes/wlwmanifest.xml"> 
+<link rel="prev" title="Surveiller son système avec Monit" href="https://arno0x0x.wordpress.com/2015/03/27/surveiller-systeme-avec-monit/">
+<link rel="next" title="Lire la température ambiante avec votre Raspberry Pi" href="https://arno0x0x.wordpress.com/2015/04/05/temp-sensor/">
+<meta name="generator" content="WordPress.com">
+<link rel="canonical" href="https://arno0x0x.wordpress.com/2015/04/02/rf433-outlet/">
+<link rel="shortlink" href="http://wp.me/p5Ub2q-28">
+<link rel="alternate" type="application/json+oembed" href="https://public-api.wordpress.com/oembed/1.0/?format=json&amp;url=https%3A%2F%2Farno0x0x.wordpress.com%2F2015%2F04%2F02%2Frf433-outlet%2F&amp;for=wpcom-auto-discovery"><link rel="alternate" type="application/xml+oembed" href="https://public-api.wordpress.com/oembed/1.0/?format=xml&amp;url=https%3A%2F%2Farno0x0x.wordpress.com%2F2015%2F04%2F02%2Frf433-outlet%2F&amp;for=wpcom-auto-discovery">
+<!-- Jetpack Open Graph Tags -->
+<meta property="og:type" content="article">
+<meta property="og:title" content="Commandez vos prises électriques à distance avec le Raspberry Pi">
+<meta property="og:url" content="https://arno0x0x.wordpress.com/2015/04/02/rf433-outlet/">
+<meta property="og:description" content="Voici enfin venu le premier article traitant réellement de domotique. Il va être ici question de télécommander des prises électriques à commande radio depuis un RPi. Nous verrons comment commander …">
+<meta property="article:published_time" content="2015-04-02T19:37:27+00:00">
+<meta property="article:modified_time" content="2015-10-08T19:13:37+00:00">
+<meta property="og:site_name" content="arno0x0x">
+<meta property="og:image" content="https://dl.dropboxusercontent.com/s/9bd5p45xmqz72vw/bc_tipping_address.png?dl=0">
+<meta property="og:locale" content="fr_FR">
+<meta name="twitter:site" content="@wordpressdotcom">
+<meta name="twitter:image" content="https://dl.dropboxusercontent.com/s/imckco5cg0llfla/bitcoin-icon.png?w=240">
+<meta name="twitter:card" content="summary">
+<meta property="fb:app_id" content="249643311490">
+<meta property="article:publisher" content="https://www.facebook.com/WordPresscom">
+<link rel="shortcut icon" type="image/x-icon" href="https://s2.wp.com/i/favicon.ico" sizes="16x16 24x24 32x32 48x48">
+<link rel="icon" type="image/x-icon" href="https://s2.wp.com/i/favicon.ico" sizes="16x16 24x24 32x32 48x48">
+<link rel="apple-touch-icon-precomposed" href="https://s0.wp.com/i/webclip.png">
+<link rel="openid.server" href="https://arno0x0x.wordpress.com/?openidserver=1">
+<link rel="openid.delegate" href="https://arno0x0x.wordpress.com/">
+<link rel="search" type="application/opensearchdescription+xml" href="https://arno0x0x.wordpress.com/osd.xml" title="arno0x0x">
+<link rel="search" type="application/opensearchdescription+xml" href="https://s1.wp.com/opensearch.xml" title="WordPress.com">
+		<style type="text/css">
+			.recentcomments a {
+				display: inline !important;
+				padding: 0 !important;
+				margin: 0 !important;
+			}
+
+			table.recentcommentsavatartop img.avatar, table.recentcommentsavatarend img.avatar {
+				border: 0px;
+				margin: 0;
+			}
+
+			table.recentcommentsavatartop a, table.recentcommentsavatarend a {
+				border: 0px !important;
+				background-color: transparent !important;
+			}
+
+			td.recentcommentsavatarend, td.recentcommentsavatartop {
+				padding: 0px 0px 1px 0px;
+				margin: 0px;
+			}
+
+			td.recentcommentstextend {
+				border: none !important;
+				padding: 0px 0px 2px 10px;
+			}
+
+			.rtl td.recentcommentstextend {
+				padding: 0px 10px 2px 0px;
+			}
+
+			td.recentcommentstexttop {
+				border: none;
+				padding: 0px 0px 0px 10px;
+			}
+
+			.rtl td.recentcommentstexttop {
+				padding: 0px 10px 0px 0px;
+			}
+		</style>
+		<meta name="application-name" content="arno0x0x"><meta name="msapplication-window" content="width=device-width;height=device-height"><meta name="msapplication-tooltip" content="Sécurité informatique, Domotique, Raspberry Pi, des 0 et des 1"><meta name="msapplication-task" content="name=S&#39;abonner;action-uri=https://arno0x0x.wordpress.com/feed/;icon-uri=https://s2.wp.com/i/favicon.ico"><meta name="msapplication-task" content="name=Inscrivez-vous pour un blog gratuit;action-uri=http://wordpress.com/signup/;icon-uri=https://s2.wp.com/i/favicon.ico"><meta name="msapplication-task" content="name=Soutien WordPress.com;action-uri=http://support.wordpress.com/;icon-uri=https://s2.wp.com/i/favicon.ico"><meta name="msapplication-task" content="name=Forums WordPress.com;action-uri=http://forums.wordpress.com/;icon-uri=https://s2.wp.com/i/favicon.ico"><meta name="title" content="Commandez vos prises électriques à distance avec le Raspberry Pi | arno0x0x sur WordPress.com">
+<meta name="description" content="Voici enfin venu le premier article traitant réellement de domotique. Il va être ici question de télécommander des prises électriques à commande radio depuis un RPi. Nous verrons comment commander deux types de prises électriques: Modèle DI-O de marque Chacon Prise simple de marque Phenix Ces deux modèles de prises ont en commun l&#39;utilisation de…">
+		<script type="text/javascript" src="./Commandez vos prises électriques à distance avec le Raspberry Pi – arno0x0x_files/amzn_ads.js"></script>
+		<script type="text/javascript">
+		try { amznads.getAds("3033"); } catch(e) { /* ignore */ }
+		</script><script type="text/javascript" src="./Commandez vos prises électriques à distance avec le Raspberry Pi – arno0x0x_files/bid"></script>
+		<script type="text/javascript">
+		try {
+			var a9_p = amznads.getKeys(),
+			_ipw_custom = {
+				wordAds: '0',
+				adSafe: '0',
+				domain: 'arno0x0x.wordpress.com',
+				pageURL: 'https://arno0x0x.wordpress.com/2015/04/02/rf433-outlet/'
+			};
+			if("undefined"!=typeof a9_p&&""!=a9_p&&null!==a9_p&&"[object Array]"===Object.prototype.toString.call(a9_p)){var a="",b=0,c=a9_p.length;a9_p.sort();for(var d=0;d<c;d++){a9_p[d-b]=a9_p[d-b].replace(/a1x6p/,"a160x600p");var e=a9_p[d-b].split("p");e[0]==a&&(a9_p.splice(d-b,1),b++);a=e[0]}_ipw_custom.amznPay=a9_p};document.close();
+		} catch(e) {}
+		</script> 		<script type="text/javascript" src="./Commandez vos prises électriques à distance avec le Raspberry Pi – arno0x0x_files/publishertag.js"></script>
+ 		<script type="text/javascript" src="./Commandez vos prises électriques à distance avec le Raspberry Pi – arno0x0x_files/head.js"></script>
+		<script type="text/javascript">
+		jQuery(window).ready(function () {
+			jQuery("a.wpa-about").text("Concernant ces publicités");
+		});
+		</script><link rel="amphtml" href="https://arno0x0x.wordpress.com/2015/04/02/rf433-outlet/amp/"><link rel="stylesheet" type="text/css" href="./Commandez vos prises électriques à distance avec le Raspberry Pi – arno0x0x_files/shCore.css"><link rel="stylesheet" type="text/css" href="./Commandez vos prises électriques à distance avec le Raspberry Pi – arno0x0x_files/shThemeDefault.css"><style type="text/css" id="syntaxhighlighteranchor"></style>
+<script type="text/javascript">
+	window.google_analytics_uacct = "UA-52447-2";
+</script>
+
+<script type="text/javascript">
+	var _gaq = _gaq || [];
+	_gaq.push(['_setAccount', 'UA-52447-2']);
+	_gaq.push(['_setDomainName', 'wordpress.com']);
+	_gaq.push(['_initData']);
+	_gaq.push(['_trackPageview']);
+
+	(function() {
+		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ga);
+	})();
+</script><script type="text/javascript" async="" src="./Commandez vos prises électriques à distance avec le Raspberry Pi – arno0x0x_files/ga.js"></script>
+<style type="text/css"></style><link rel="stylesheet" type="text/css" id="gravatar-card-css" href="./Commandez vos prises électriques à distance avec le Raspberry Pi – arno0x0x_files/hovercard.css"><link rel="stylesheet" type="text/css" id="gravatar-card-services-css" href="./Commandez vos prises électriques à distance avec le Raspberry Pi – arno0x0x_files/services.css"></head>
+
+<body class="single single-post postid-132 single-format-standard mp6 customizer-styles-applied no-sidebar highlander-enabled highlander-light">
+	<a class="skip-link screen-reader-text" href="https://arno0x0x.wordpress.com/2015/04/02/rf433-outlet/#content">Skip to content</a>
+
+	<div class="site-top">
+		<div class="content-wrapper">
+			<nav id="site-navigation" class="main-navigation" role="navigation">
+				<button class="menu-toggle" aria-controls="menu" aria-expanded="false"><span class="screen-reader-text">Menu principal</span></button>
+				<div class="nav-menu"><ul aria-expanded="false" class=" nav-menu"><li><a href="https://arno0x0x.wordpress.com/">Accueil</a></li><li class="page_item page-item-264"><a href="https://arno0x0x.wordpress.com/archives-des-articles/">Archives des articles</a></li><li class="page_item page-item-1"><a href="https://arno0x0x.wordpress.com/a-propos/">À propos</a></li></ul></div>
+			</nav><!-- #site-navigation -->
+
+			<div class="site-search">
+				<button class="search-toggle"><span class="screen-reader-text">Recherche</span></button>
+				<div class="search-expand">
+					<div class="search-expand-inner">
+						<form role="search" method="get" class="search-form" action="https://arno0x0x.wordpress.com/">
+				<label>
+					<span class="screen-reader-text">Rechercher&nbsp;:</span>
+					<input type="search" class="search-field" placeholder="Recherche…" value="" name="s">
+				</label>
+				<input type="submit" class="search-submit" value="Rechercher">
+			</form>					</div>
+				</div>
+			</div><!-- .site-search -->
+    	</div>
+	</div><!-- .site-top -->
+
+	<header class="site-header" role="banner">
+			<div class="site-branding">
+								<h1 class="site-title"><a href="https://arno0x0x.wordpress.com/" rel="home">arno0x0x</a></h1>
+				<h2 class="site-description">Sécurité informatique, Domotique, Raspberry Pi, des 0 et des 1</h2>
+			</div><!-- .site-branding -->
+	</header><!-- .site-header -->
+
+	<div id="content" class="site-content">
+	<div id="primary" class="content-area">
+		<main id="main" class="site-main" role="main">
+
+		
+			
+<article id="post-132" class="post-132 post type-post status-publish format-standard hentry category-domotique category-raspberry-pi tag-domotique-2 tag-raspberry-pi">
+	<header class="entry-header">
+
+		<h2 class="entry-title"><a href="https://arno0x0x.wordpress.com/2015/04/02/rf433-outlet/" rel="bookmark">Commandez vos prises électriques à distance avec le Raspberry&nbsp;Pi</a></h2>
+					<div class="entry-meta">
+				<span class="posted-on"><a href="https://arno0x0x.wordpress.com/2015/04/02/rf433-outlet/" rel="bookmark"><time class="entry-date published" datetime="2015-04-02T20:37:27+00:00">2 avril 2015</time><time class="updated" datetime="2015-10-08T20:13:37+00:00">8 octobre 2015</time></a></span><span class="byline"><span class="author vcard"><a class="url fn n" href="https://arno0x0x.wordpress.com/author/arno0x0x/">arno0x0x</a></span></span>			</div><!-- .entry-meta -->
+		
+	</header><!-- .entry-header -->
+
+	
+		<div class="entry-content">
+			<p style="text-align:justify;">Voici enfin venu le premier article traitant réellement de domotique. Il va être ici question de télécommander des prises électriques à commande radio depuis un RPi.</p>
+<p style="text-align:justify;">Nous verrons comment commander deux types de prises électriques:</p>
+<ul style="text-align:justify;">
+<li>Modèle DI-O de marque Chacon</li>
+<li>Prise simple de marque Phenix</li>
+</ul>
+<p style="text-align:justify;">Ces deux modèles de prises ont en commun l’utilisation de la bande de radio-fréquence 433MHz, très courante en domotique, avec un codage simple des commandes sur cette bande de fréquence.</p>
+<p style="text-align:justify;"><span id="more-132"></span></p>
+<p style="text-align:justify;">L’utilisation de prises électriques à commande radio va nous permettre de piloter facilement, c’est à dire sans avoir à tirer de câbles supplémentaires, tout équipement électrique de la maison branché sur une prise. La portée du dispositif présenté ici dépend de la puissance d’alimentation du module, des parois de votre maison, mais en principe on peut compter sur une portée minimale de 30m.</p>
+<p style="text-align:justify;">Je me sers de ces prises pour commander des lampes, et des radiateurs électriques (<em>n’ayant pas de fil pilote</em>). On prêtera bien attention à la puissance de coupure de ces prises, en particulier pour les radiateurs: les Chacon DI-O peuvent couper jusqu’à 2400W ce qui est largement suffisant pour mes radiateurs de 1500W.</p>
+<h1 style="text-align:justify;">Le matériel</h1>
+<hr>
+<p style="text-align:justify;">D’abord les prises électriques radio commandées:</p>
+<p style="text-align:center;"><a href="https://www.dropbox.com/s/lpf8myfdz9tjt3s/rf433-outlet-01.jpg?dl=0"><img src="./Commandez vos prises électriques à distance avec le Raspberry Pi – arno0x0x_files/rf433-outlet-01.jpg" scale="0"></a></p>
+<p style="text-align:justify;">On trouve ce genre de prises assez facilement sur internet. Les Chacon DI-O sont plus chères, mais elles ont un pouvoir de coupure supérieur et on les trouvera sans doute plus facilement que le modèle de prise Phenix qui commence à dater un peu. Concernant les prises Phenix, bien que ce tutoriel ait été testé et validé uniquement avec le modèle présenté ici, il est fort probable que cela fonctionne aussi sur des modèles plus récents, ça serait à tester.</p>
+<p style="text-align:justify;">Ensuite, nous allons avoir besoin d’un émetteur radio-fréquence 433MHz. Ce petit composant étant assez répandu, il coûte peu cher, on le trouve par exemple sur Amazon (<em>recherchez simplement «&nbsp;rf433&nbsp;»</em>) sous la forme d’un couple émetteur/récepteur. Nous n’aurons ici besoin que de l’émetteur:</p>
+<p style="text-align:center;"><a href="https://www.dropbox.com/s/i2yf7iwo1mdxmjp/rf433-outlet-02.jpg?dl=0"><img src="./Commandez vos prises électriques à distance avec le Raspberry Pi – arno0x0x_files/rf433-outlet-02.jpg" scale="0"></a></p>
+<h1 style="text-align:justify;">Le principe</h1>
+<hr>
+<p style="text-align:justify;">La fréquence de 433MHz n’est que la <em>porteuse</em> du signal, l’information en elle même est transmise à seulement quelques kilohertz, ce que les ports GPIO d’un RPi peuvent parfaitement atteindre. Le principe est donc de connecter un des ports GPIO du RPi sur la broche «&nbsp;DATA&nbsp;» de l’émetteur RF433, et d’envoyer sur ce port les bonnes trames de communication (<em>trame:</em> <em>séquence de 1 et de 0 matérialisés par des états haut ou bas d’un signal électrique, ou par des fronts montant ou descendant, et ce pendant une certaine durée</em>). Chaque marque ou modèle de prise utilise un protocole de communication propre, plus ou moins standard et plus ou moins bien documenté.</p>
+<p style="text-align:justify;">Les DI-O de Chacon, par exemple, utilisent le protocole <em>HomeEasy</em>, qui n’est apparemment pas bien documenté, mais sur lequel l’inénarrable <a href="http://blog.idleman.fr/" target="_blank">Idleman </a>a néanmoins effectué de la rétro-ingénierie afin de comprendre le codage utilisé et le format des trames (<a href="http://blog.idleman.fr/raspberry-pi-10-commander-le-raspberry-pi-par-radio/" target="_blank"><em>lien</em></a>). Un travail similaire a été fait par d’autres personnes pour les modèles de prise Phenix.</p>
+<p style="text-align:justify;">On remercie donc tout ce beau monde de nous fournir les programmes qui permettent de communiquer avec nos modèles de prises.</p>
+<h1 style="text-align:justify;">Les branchements</h1>
+<hr>
+<p style="text-align:justify;">On va commencer par souder une antenne sur l’émetteur RF433. L’antenne peut être faite à partir de n’importe quel type de fil conducteur électrique, dans l’idéal suffisamment rigide pour tenir droit. La taille idéale de l’antenne est dictée par la fréquence utilisée (<em>ici 433.92MHz pour être précis</em>). On choisira de faire une antenne de la taille d’un 1/4 d’onde:</p>
+<blockquote>
+<p style="text-align:justify;">longueur onde entière = vitesse de la lumière / fréquence en MHz<br>
+soit longueur d’onde = 300 000 / 433,92 = 691,37 mm<br>
+1/4 d’onde = 691,37 mm / 4 = ~ <strong>173</strong>mm</p>
+</blockquote>
+<p style="text-align:justify;">On fera donc une antenne d’environ 17cm (<em>si vous arrivez à faire 17,3cm, tant mieux</em>). On soude cette antenne sur l’émetteur RF433 sur son bornier identifié «&nbsp;ANT&nbsp;»:</p>
+<p style="text-align:center;"><a href="https://www.dropbox.com/s/rfc3t96wgc63qhy/rf433-outlet-04.jpg?dl=0"><img src="./Commandez vos prises électriques à distance avec le Raspberry Pi – arno0x0x_files/rf433-outlet-04.jpg" scale="0"></a></p>
+<p style="text-align:justify;">Pour la suite des branchements, on peut utiliser une plaque de prototypage (<em>voir photo ci-dessus</em>) qui permet de faire des connexions sans soudure pour les composants électroniques ayant un pas d’écartement standard entre leurs broches (<em>2,54mm</em>).</p>
+<p style="text-align:justify;">On relie l’émetteur RF433 au RPi:</p>
+<ul>
+<li style="text-align:justify;">la broche «&nbsp;GND&nbsp;» du module à la masse du RPi (<em>pin numéro 6</em>)</li>
+<li style="text-align:justify;">la broche «&nbsp;VCC&nbsp;» du module à l’alimentation 3.3V du RPi (<em>pin numéro 1</em>)</li>
+<li style="text-align:justify;">la broche «&nbsp;DATA&nbsp;» du module au GPIO sur le pin numéro 11</li>
+</ul>
+<p style="text-align:center;"><a href="https://www.dropbox.com/s/7in1xtdbmm241ob/rf433-outlet-05.jpg?dl=0"><img src="./Commandez vos prises électriques à distance avec le Raspberry Pi – arno0x0x_files/rf433-outlet-05.jpg" scale="0"></a></p>
+<p style="text-align:center;"><em>– source <a href="http://blog.idleman.fr/" rel="nofollow">http://blog.idleman.fr</a> –</em></p>
+<h1 style="text-align:justify;">La partie logicielle</h1>
+<hr>
+<p style="text-align:justify;">Nous allons maintenant télécharger, compiler, et installer sur le RPi les deux programmes correspondant à chacun des modèles de prise, ainsi que les modules ou bibliothèques dont ils dépendent. Il nous faut:</p>
+<ul>
+<li>La bibliothèque <em>WiringPi</em>, qui est une dépendance pour nos deux programmes</li>
+<li>Un programme de commande pour les prises Chacon DI-O</li>
+<li style="text-align:justify;">Un programme de commande pour les prises Phenix</li>
+</ul>
+<p style="text-align:justify;"><span style="text-decoration:underline;"><strong>Installation de WiringPi:</strong></span></p>
+<p style="text-align:justify;">Cette bibliothèque propose une interface de communication pratique pour le développement d’applications utilisant les ports GPIO des RPi. L’installation est expliquée sur la page mentionnée ci-dessous, elle est très simple et je suggère d’utiliser le «&nbsp;Plan B&nbsp;» proposé par le sieur Gordon. Le script d’installation compile la dernière version de WiringPi et l’installe sur le système automatiquement.</p>
+<p style="text-align:justify;">Tout est là: <a href="http://wiringpi.com/download-and-install/" rel="nofollow">http://wiringpi.com/download-and-install/</a></p>
+<p style="text-align:justify;"><span style="text-decoration:underline;"><strong>Programme de commande des prises Chacon DI-O:</strong></span></p>
+<p style="text-align:justify;"><a href="http://blog.idleman.fr/" target="_blank">Idleman</a> a développé un programme en C++ (<em>sous licence CC-BY-SA</em>) qui permet d’envoyer des ordres aux prises Chacon DI-O en implémentant une partie du protocole <em>HomeEasy</em>. Le package qu’Idleman propose en téléchargement contient plusieurs choses qui ne nous intéressent pas dans le cadre de cet article (<em>mais allez jeter un œil à <a href="http://blog.idleman.fr/" target="_blank">son blog</a>, ça vaut vraiment le coup</em>). J’ai légèrement modifié son code pour supprimer un appel système qui me générait une erreur. Je vous propose donc une petite archive zip contenant juste le fichier à compiler.</p>
+<ol>
+<li style="text-align:justify;">Télécharger le petit package que j’ai préparé <span style="text-decoration:underline;"><a href="https://www.dropbox.com/s/cjk6iydb1ugizd4/chacon_send.zip?dl=0" target="_blank">ici</a></span> puis copiez le sur le RPi</li>
+<li style="text-align:justify;">Dézipper l’archive et placez vous dans le répertoire résultant</li>
+<li style="text-align:justify;">Compiler le programme avec g++, le compilateur C++ fournit en standard sur le RPi. <span style="text-decoration:underline;"><strong>NB</strong></span>: l’installation de WiringPi ci-avant est indispensable.</li>
+</ol>
+<p style="text-align:justify;">Ce qui donne la séquence suivante, en ligne de commande:</p>
+<div><div id="highlighter_808697" class="syntaxhighlighter  plain"><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="gutter"><div class="line number1 index0 alt2">1</div><div class="line number2 index1 alt1">2</div><div class="line number3 index2 alt2">3</div><div class="line number4 index3 alt1">4</div><div class="line number5 index4 alt2">5</div><div class="line number6 index5 alt1">6</div><div class="line number7 index6 alt2">7</div><div class="line number8 index7 alt1">8</div><div class="line number9 index8 alt2">9</div><div class="line number10 index9 alt1">10</div><div class="line number11 index10 alt2">11</div><div class="line number12 index11 alt1">12</div><div class="line number13 index12 alt2">13</div><div class="line number14 index13 alt1">14</div><div class="line number15 index14 alt2">15</div></td><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="plain plain">pi@domopi ~ $ wget -q -O chacon_send.zip <a href="https://www.dropbox.com/s/cjk6iydb1ugizd4/chacon_send.zip?dl=0">https://www.dropbox.com/s/cjk6iydb1ugizd4/chacon_send.zip?dl=0</a></code></div><div class="line number2 index1 alt1"><code class="plain plain">pi@domopi ~ $ unzip chacon_send.zip</code></div><div class="line number3 index2 alt2"><code class="plain plain">Archive:&nbsp; chacon_send.zip</code></div><div class="line number4 index3 alt1"><code class="plain spaces">&nbsp;&nbsp;&nbsp;</code><code class="plain plain">creating: chacon_send/</code></div><div class="line number5 index4 alt2"><code class="plain spaces">&nbsp;&nbsp;</code><code class="plain plain">inflating: chacon_send/chacon_send.cpp</code></div><div class="line number6 index5 alt1"><code class="plain spaces">&nbsp;&nbsp;</code><code class="plain plain">inflating: chacon_send/wiringPi.h</code></div><div class="line number7 index6 alt2"><code class="plain plain">pi@domopi ~ $ cd chacon_send/</code></div><div class="line number8 index7 alt1"><code class="plain plain">pi@domopi ~/chacon_send $ g++ -o chacon_send chacon_send.cpp -lwiringPi</code></div><div class="line number9 index8 alt2"><code class="plain plain">pi@domopi ~/chacon_send $ ls -la</code></div><div class="line number10 index9 alt1"><code class="plain plain">total 40</code></div><div class="line number11 index10 alt2"><code class="plain plain">drwxr-xr-x&nbsp; 2 pi pi&nbsp; 4096 Apr&nbsp; 1 20:11 .</code></div><div class="line number12 index11 alt1"><code class="plain plain">drwxr-xr-x 11 pi pi&nbsp; 4096 Apr&nbsp; 1 20:10 ..</code></div><div class="line number13 index12 alt2"><code class="plain plain">-rwxr-xr-x&nbsp; 1 pi pi 13177 Apr&nbsp; 1 20:11 chacon_send</code></div><div class="line number14 index13 alt1"><code class="plain plain">-rw-r--r--&nbsp; 1 pi pi&nbsp; 5686 Apr&nbsp; 1 19:52 chacon_send.cpp</code></div><div class="line number15 index14 alt2"><code class="plain plain">-rw-r--r--&nbsp; 1 pi pi&nbsp; 6405 Mar&nbsp; 8 18:59 wiringPi.h</code></div></div></td></tr></tbody></table></div></div>
+<p style="text-align:justify;">Le résultat de la compilation est un fichier exécutable «&nbsp;chacon_send&nbsp;». On verra dans le paragraphe suivant comment l’utiliser.</p>
+<p>&nbsp;<span style="text-decoration:underline;"><strong>Programme de commande des prises Phenix:</strong></span></p>
+<p style="text-align:justify;">Pour les prises Phenix, il est possible d’utiliser le code du projet <em>RCSwitch-Pi (<a href="https://github.com/r10r/rcswitch-pi" target="_blank">dépôt Github</a>)</em>, lui même basé sur le code du projet <em>RCSwitch</em> initialement développé pour les micro-contrôleurs Arduino. J’ai, à nouveau, légèrement modifié le code proposé afin de permettre de choisir, lors de l’appel du programme, quel port GPIO doit être utilisé. Je vous propose donc une petite archive zip contenant les modifications, le tout prêt à compiler.</p>
+<ol>
+<li style="text-align:justify;">Télécharger le petit package que j’ai préparé <span style="text-decoration:underline;"><a href="https://www.dropbox.com/s/236v1hyx4icz2qm/phenix_send.zip?dl=0" target="_blank">ici</a></span> puis copiez le sur le RPi</li>
+<li style="text-align:justify;">Dézipper l’archive et placez vous dans le répertoire résultant</li>
+<li style="text-align:justify;">Lancer la commande «&nbsp;make all&nbsp;». <span style="text-decoration:underline;"><strong>NB</strong></span>: l’installation de WiringPi ci-avant est indispensable</li>
+</ol>
+<p>Ce qui donne la séquence suivante, en ligne de commande:</p>
+<div><div id="highlighter_862571" class="syntaxhighlighter  plain"><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="gutter"><div class="line number1 index0 alt2">1</div><div class="line number2 index1 alt1">2</div><div class="line number3 index2 alt2">3</div><div class="line number4 index3 alt1">4</div><div class="line number5 index4 alt2">5</div><div class="line number6 index5 alt1">6</div><div class="line number7 index6 alt2">7</div><div class="line number8 index7 alt1">8</div><div class="line number9 index8 alt2">9</div><div class="line number10 index9 alt1">10</div><div class="line number11 index10 alt2">11</div><div class="line number12 index11 alt1">12</div><div class="line number13 index12 alt2">13</div><div class="line number14 index13 alt1">14</div><div class="line number15 index14 alt2">15</div><div class="line number16 index15 alt1">16</div><div class="line number17 index16 alt2">17</div><div class="line number18 index17 alt1">18</div><div class="line number19 index18 alt2">19</div><div class="line number20 index19 alt1">20</div><div class="line number21 index20 alt2">21</div><div class="line number22 index21 alt1">22</div><div class="line number23 index22 alt2">23</div><div class="line number24 index23 alt1">24</div><div class="line number25 index24 alt2">25</div><div class="line number26 index25 alt1">26</div><div class="line number27 index26 alt2">27</div><div class="line number28 index27 alt1">28</div><div class="line number29 index28 alt2">29</div><div class="line number30 index29 alt1">30</div><div class="line number31 index30 alt2">31</div><div class="line number32 index31 alt1">32</div><div class="line number33 index32 alt2">33</div><div class="line number34 index33 alt1">34</div><div class="line number35 index34 alt2">35</div><div class="line number36 index35 alt1">36</div><div class="line number37 index36 alt2">37</div><div class="line number38 index37 alt1">38</div><div class="line number39 index38 alt2">39</div><div class="line number40 index39 alt1">40</div></td><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="plain plain">pi@domopi ~ $ wget -q -O phenix_send.zip <a href="https://www.dropbox.com/s/236v1hyx4icz2qm/phenix_send.zip?dl=0">https://www.dropbox.com/s/236v1hyx4icz2qm/phenix_send.zip?dl=0</a></code></div><div class="line number2 index1 alt1"><code class="plain plain">pi@domopi ~ $ unzip phenix_send.zip</code></div><div class="line number3 index2 alt2"><code class="plain plain">Archive:&nbsp; phenix_send.zip</code></div><div class="line number4 index3 alt1"><code class="plain spaces">&nbsp;&nbsp;&nbsp;</code><code class="plain plain">creating: phenix_send/</code></div><div class="line number5 index4 alt2"><code class="plain spaces">&nbsp;&nbsp;</code><code class="plain plain">inflating: phenix_send/Makefile</code></div><div class="line number6 index5 alt1"><code class="plain spaces">&nbsp;&nbsp;</code><code class="plain plain">inflating: phenix_send/phenix_send.cpp</code></div><div class="line number7 index6 alt2"><code class="plain spaces">&nbsp;&nbsp;</code><code class="plain plain">inflating: phenix_send/RCSwitch.cpp</code></div><div class="line number8 index7 alt1"><code class="plain spaces">&nbsp;&nbsp;</code><code class="plain plain">inflating: phenix_send/RCSwitch.h</code></div><div class="line number9 index8 alt2">&nbsp;</div><div class="line number10 index9 alt1"><code class="plain plain">pi@domopi ~ $ cd phenix_send/</code></div><div class="line number11 index10 alt2">&nbsp;</div><div class="line number12 index11 alt1"><code class="plain plain">pi@domopi ~/phenix_send $ make all</code></div><div class="line number13 index12 alt2"><code class="plain plain">g++&nbsp;&nbsp;&nbsp; -c -o RCSwitch.o RCSwitch.cpp</code></div><div class="line number14 index13 alt1"><code class="plain plain">RCSwitch.cpp: In member function ‘char* RCSwitch::getCodeWordB(int, int, boolean)’:</code></div><div class="line number15 index14 alt2"><code class="plain plain">RCSwitch.cpp:194:61: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]</code></div><div class="line number16 index15 alt1"><code class="plain plain">RCSwitch.cpp:194:61: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]</code></div><div class="line number17 index16 alt2"><code class="plain plain">RCSwitch.cpp:194:61: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]</code></div><div class="line number18 index17 alt1"><code class="plain plain">RCSwitch.cpp:194:61: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]</code></div><div class="line number19 index18 alt2"><code class="plain plain">RCSwitch.cpp:194:61: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]</code></div><div class="line number20 index19 alt1"><code class="plain plain">RCSwitch.cpp: In member function ‘char* RCSwitch::getCodeWordA(char*, int, boolean)’:</code></div><div class="line number21 index20 alt2"><code class="plain plain">RCSwitch.cpp:229:74: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]</code></div><div class="line number22 index21 alt1"><code class="plain plain">RCSwitch.cpp:229:74: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]</code></div><div class="line number23 index22 alt2"><code class="plain plain">RCSwitch.cpp:229:74: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]</code></div><div class="line number24 index23 alt1"><code class="plain plain">RCSwitch.cpp:229:74: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]</code></div><div class="line number25 index24 alt2"><code class="plain plain">RCSwitch.cpp:229:74: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]</code></div><div class="line number26 index25 alt1"><code class="plain plain">RCSwitch.cpp:229:74: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]</code></div><div class="line number27 index26 alt2"><code class="plain plain">g++&nbsp;&nbsp;&nbsp; -c -o phenix_send.o phenix_send.cpp</code></div><div class="line number28 index27 alt1"><code class="plain plain">g++&nbsp;&nbsp; RCSwitch.o phenix_send.o -o phenix_send -lwiringPi</code></div><div class="line number29 index28 alt2">&nbsp;</div><div class="line number30 index29 alt1"><code class="plain plain">pi@domopi ~/phenix_send $ ls -la</code></div><div class="line number31 index30 alt2"><code class="plain plain">total 80</code></div><div class="line number32 index31 alt1"><code class="plain plain">drwxr-xr-x&nbsp; 2 pi pi&nbsp; 4096 Apr&nbsp; 2 09:43 .</code></div><div class="line number33 index32 alt2"><code class="plain plain">drwxr-xr-x 12 pi pi&nbsp; 4096 Apr&nbsp; 2 09:43 ..</code></div><div class="line number34 index33 alt1"><code class="plain plain">-rw-r--r--&nbsp; 1 pi pi&nbsp;&nbsp; 138 Apr&nbsp; 2 09:09 Makefile</code></div><div class="line number35 index34 alt2"><code class="plain plain">-rwxr-xr-x&nbsp; 1 pi pi 16982 Apr&nbsp; 2 09:43 phenix_send</code></div><div class="line number36 index35 alt1"><code class="plain plain">-rw-r--r--&nbsp; 1 pi pi&nbsp;&nbsp; 880 Apr&nbsp; 2 09:12 phenix_send.cpp</code></div><div class="line number37 index36 alt2"><code class="plain plain">-rw-r--r--&nbsp; 1 pi pi&nbsp; 1980 Apr&nbsp; 2 09:43 phenix_send.o</code></div><div class="line number38 index37 alt1"><code class="plain plain">-rw-r--r--&nbsp; 1 pi pi 16706 Aug 12&nbsp; 2012 RCSwitch.cpp</code></div><div class="line number39 index38 alt2"><code class="plain plain">-rw-r--r--&nbsp; 1 pi pi&nbsp; 3838 Aug 12&nbsp; 2012 RCSwitch.h</code></div><div class="line number40 index39 alt1"><code class="plain plain">-rw-r--r--&nbsp; 1 pi pi 12400 Apr&nbsp; 2 09:43 RCSwitch.o</code></div></div></td></tr></tbody></table></div></div>
+<p>Le résultat de la compilation, hormis quelques warning sans conséquence, est un fichier exécutable «&nbsp;phenix_send&nbsp;». On verra dans le paragraphe suivant comment l’utiliser.</p>
+<h1>Envoyer les ordres aux prises</h1>
+<hr>
+<p style="text-align:justify;">A ce stade, l’émetteur RF433 est bien connecté au RPi, et on dispose de deux programmes permettant d’envoyer des ordres à chacun des deux modèles de prises.</p>
+<p style="text-align:justify;">Toute prise, quel que soit le modèle et quel que soit le protocole de communication, doit se voir attribuer un numéro qui permet de l’identifier. Lorsqu’une commande est émise sur la fréquence de communication, ce numéro d’identification est envoyé dans la trame, entre autre information, afin que la prise concernée et uniquement elle, réagisse à la commande. C’est en quelque sorte l’ «&nbsp;adresse&nbsp;» de la prise.</p>
+<p style="text-align:justify;"><span style="text-decoration:underline;"><strong>Prises Chacon DI-O</strong></span></p>
+<p style="text-align:justify;">Pour les prises Chacon DI-O, l’attribution du numéro d’identification de la prise se fait lors du branchement sur le secteur. Celle-ci passe temporairement dans un mode de programmation qui fait que la première trame de commande qu’elle reçoit lui fixe son numéro d’identification.</p>
+<p style="text-align:justify;">On utilise le programme «&nbsp;chacon_send&nbsp;» que nous avons préalablement compilé. La commande se présente comme suit:</p>
+<div><div id="highlighter_454654" class="syntaxhighlighter  plain"><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="gutter"><div class="line number1 index0 alt2">1</div></td><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="plain plain">chacon_send &lt;wiringPI pin&gt; &lt;controler_code&gt; &lt;outlet_code&gt; &lt;on|off&gt;</code></div></div></td></tr></tbody></table></div></div>
+<ul>
+<li style="text-align:justify;"><em>wiringPi pin</em> : Il s’agit du numéro wiringPi sur lequel on a branché la broche «&nbsp;DATA&nbsp;» de l’émetteur RF433. On a vu avant qu’il s’agissait du pin physique 11, qui correspond au wiringPi pin <strong>0</strong>, c’est donc ce numéro qu’on spécifiera<strong><br>
+</strong></li>
+<li style="text-align:justify;"><em>controler_code</em> : numéro identification de l’émetteur, d’une longueur de 26 bits. C’est arbitraire dans notre cas, on mettra n’importe quel nombre qui sera ramené à 26 bits</li>
+<li style="text-align:justify;"><em>outlet_code</em> : numéro d’identification de la prise. Si une prise vient juste d’être mise sur le secteur, elle prendra ce code comme identifiant et le gardera en mémoire</li>
+<li style="text-align:justify;"><em>on|off</em> : commande à envoyer, ON ou OFF pour allumer ou éteindre la prise</li>
+</ul>
+<p style="text-align:justify;"><span style="text-decoration:underline;"><em>Exemple:</em></span> Branchez une prise Chacon DI-O sur secteur et de suite après, entrez les lignes suivantes le RPi.<span style="text-decoration:underline;"><em><br>
+</em></span></p>
+<div><div id="highlighter_410581" class="syntaxhighlighter  bash"><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="gutter"><div class="line number1 index0 alt2">1</div><div class="line number2 index1 alt1">2</div></td><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="bash plain">pi@domopi ~</code><code class="bash plain">/chacon_send</code> <code class="bash plain">$ </code><code class="bash functions">sudo</code> <code class="bash plain">.</code><code class="bash plain">/chacon_send</code> <code class="bash plain">0 12325261 1 on</code></div><div class="line number2 index1 alt1"><code class="bash plain">pi@domopi ~</code><code class="bash plain">/chacon_send</code> <code class="bash plain">$ </code><code class="bash functions">sudo</code> <code class="bash plain">.</code><code class="bash plain">/chacon_send</code> <code class="bash plain">0 12325261 1 off</code></div></div></td></tr></tbody></table></div></div>
+<p style="text-align:justify;">Si tout se passe bien, la prise Chacon DI-O devrait s’allumer et s’éteindre<img draggable="false" class="emoji" alt="🙂" src="./Commandez vos prises électriques à distance avec le Raspberry Pi – arno0x0x_files/1f642.svg" scale="0"></p>
+<p style="text-align:justify;"><span style="text-decoration:underline;"><strong>Prises Phenix<br>
+</strong></span></p>
+<p style="text-align:justify;">Pour les prises Phenix, l’attribution du numéro d’identification se fait par le biais de petits «&nbsp;<em>switch dip</em>«&nbsp;, situés dans la prise:</p>
+<p style="text-align:center;"><a href="https://www.dropbox.com/s/g2fz6r4oq6zao66/rf433-outlet-03.jpg?dl=0"><img src="./Commandez vos prises électriques à distance avec le Raspberry Pi – arno0x0x_files/rf433-outlet-03.jpg" scale="0"></a></p>
+<ul>
+<li style="text-align:justify;">Les <em>switchs dip</em> marqués 1 à 5 servent à identifier l’émetteur auquel la prise répondra</li>
+<li style="text-align:justify;">Les <em>switchs dip</em> marqués A à D servent à identifier la prise elle-même. Le switch A étant le bit de poids le plus faible et le switch D le bit de poids le plus fort. Sur la photo: A=0, B=1, C=0, D=0, ce qui donne, en binaire et en remettant les bits dans le sens naturel de lecture : 0010, soit <strong>2</strong> en décimal</li>
+</ul>
+<p style="text-align:justify;">On utilise le programme «&nbsp;phenix_send&nbsp;» que nous avons préalablement compilé. La commande se présente comme suit:</p>
+<div><div id="highlighter_583773" class="syntaxhighlighter  plain"><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="gutter"><div class="line number1 index0 alt2">1</div></td><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="plain plain">phenix_send &lt;wiringPi pin&gt; &lt;controler_code&gt; &lt;outlet_code&gt; &lt;1|0&gt;</code></div></div></td></tr></tbody></table></div></div>
+<ul>
+<li style="text-align:justify;"><em>wiringPi pin</em> : Il s’agit du numéro wiringPi sur lequel on a branché la broche «&nbsp;DATA&nbsp;» de l’émetteur RF433. On a vu avant qu’il s’agissait du pin physique 11, qui correspond au wiringPi pin <strong>0</strong></li>
+<li style="text-align:justify;"><em>controler_code</em> : numéro identification de l’émetteur tel que définit par les dip switch correspondant. On l’écrit directement sous représentation binaire correspondante</li>
+<li style="text-align:justify;"><em>outlet_code</em> : numéro d’identification de la prise tel que définit par les dip switch correspondant. On le spécifie en format décimal (<em>selon l’explication du calcul ci-avant</em>)</li>
+<li style="text-align:justify;"><em>0|1</em> : commande à envoyer, 0 pour éteindre la prise ou 1 pour allumer</li>
+</ul>
+<p style="text-align:justify;"><span style="text-decoration:underline;"><em>Exemple:</em></span> Branchez une prise Phenix sur secteur, configurez le dip switch comme sur la photo, puis entrez les lignes suivantes le RPi.<span style="text-decoration:underline;"><em><br>
+</em></span></p>
+<div><div id="highlighter_335932" class="syntaxhighlighter  bash"><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="gutter"><div class="line number1 index0 alt2">1</div><div class="line number2 index1 alt1">2</div></td><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="bash plain">pi@domopi ~</code><code class="bash plain">/phenix_send</code> <code class="bash plain">$ </code><code class="bash functions">sudo</code> <code class="bash plain">.</code><code class="bash plain">/phenix_send</code> <code class="bash plain">0 10110 2 1</code></div><div class="line number2 index1 alt1"><code class="bash plain">pi@domopi ~</code><code class="bash plain">/phenix_send</code> <code class="bash plain">$ </code><code class="bash functions">sudo</code> <code class="bash plain">.</code><code class="bash plain">/phenix_send</code> <code class="bash plain">0 10110 2 0</code></div></div></td></tr></tbody></table></div></div>
+<p style="text-align:justify;">Si tout se passe bien, la prise Phenix devrait s’allumer et s’éteindre<img draggable="false" class="emoji" alt="🙂" src="./Commandez vos prises électriques à distance avec le Raspberry Pi – arno0x0x_files/1f642.svg" scale="0"></p>
+<h1 style="text-align:justify;">Commande par le réseau</h1>
+<hr>
+<p style="text-align:justify;">On pourrait bien sûr en rester là et créer localement des scripts qui déclenchent les prises de manière autonome et programmée. Mais dans le cadre de mon installation (<em>voir <a title="Un réseau domotique et informatique à base de Raspberry Pi" href="https://arno0x0x.wordpress.com/2015/03/17/environnement-de-base/" target="_blank">cet article</a></em>), j’ai besoin de pouvoir actionner les prises depuis un autre RPi.</p>
+<p style="text-align:justify;">J’avais détaillé dans <a title="Communication entre les deux Raspberry Pi" href="https://arno0x0x.wordpress.com/2015/03/22/communication-entre-rpi/" target="_blank">cet article comment faire communiquer les deux RPi</a>: le RPi frontal et le DomoPi. Nous avons donc là de nouveaux services domotiques tout désignés à rajouter au script permettant d’y accéder à distance.</p>
+<p style="text-align:justify;">Voici donc une version plus complète, intégrant mes commandes de lampes (<em>branchées sur des prises Phenix</em>) et de radiateurs (<em>branchés sur des prises Chacon DI-O</em>):</p>
+<div><div id="highlighter_601511" class="syntaxhighlighter collapsed  bash"><div class="toolbar"><span><a href="https://arno0x0x.wordpress.com/2015/04/02/rf433-outlet/#" class="toolbar_item command_expandSource expandSource">+ expand source</a></span><span><a href="https://arno0x0x.wordpress.com/2015/04/02/rf433-outlet/#" class="toolbar_item command_help help">?</a></span></div><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="gutter"><div class="line number1 index0 alt2">1</div><div class="line number2 index1 alt1">2</div><div class="line number3 index2 alt2">3</div><div class="line number4 index3 alt1">4</div><div class="line number5 index4 alt2">5</div><div class="line number6 index5 alt1">6</div><div class="line number7 index6 alt2">7</div><div class="line number8 index7 alt1">8</div><div class="line number9 index8 alt2">9</div><div class="line number10 index9 alt1">10</div><div class="line number11 index10 alt2">11</div><div class="line number12 index11 alt1">12</div><div class="line number13 index12 alt2">13</div><div class="line number14 index13 alt1">14</div><div class="line number15 index14 alt2">15</div><div class="line number16 index15 alt1">16</div><div class="line number17 index16 alt2">17</div><div class="line number18 index17 alt1">18</div><div class="line number19 index18 alt2">19</div><div class="line number20 index19 alt1">20</div><div class="line number21 index20 alt2">21</div><div class="line number22 index21 alt1">22</div><div class="line number23 index22 alt2">23</div><div class="line number24 index23 alt1">24</div><div class="line number25 index24 alt2">25</div><div class="line number26 index25 alt1">26</div><div class="line number27 index26 alt2">27</div><div class="line number28 index27 alt1">28</div><div class="line number29 index28 alt2">29</div><div class="line number30 index29 alt1">30</div><div class="line number31 index30 alt2">31</div><div class="line number32 index31 alt1">32</div><div class="line number33 index32 alt2">33</div><div class="line number34 index33 alt1">34</div><div class="line number35 index34 alt2">35</div><div class="line number36 index35 alt1">36</div><div class="line number37 index36 alt2">37</div><div class="line number38 index37 alt1">38</div><div class="line number39 index38 alt2">39</div><div class="line number40 index39 alt1">40</div><div class="line number41 index40 alt2">41</div><div class="line number42 index41 alt1">42</div><div class="line number43 index42 alt2">43</div><div class="line number44 index43 alt1">44</div><div class="line number45 index44 alt2">45</div><div class="line number46 index45 alt1">46</div><div class="line number47 index46 alt2">47</div><div class="line number48 index47 alt1">48</div><div class="line number49 index48 alt2">49</div><div class="line number50 index49 alt1">50</div><div class="line number51 index50 alt2">51</div><div class="line number52 index51 alt1">52</div><div class="line number53 index52 alt2">53</div><div class="line number54 index53 alt1">54</div><div class="line number55 index54 alt2">55</div><div class="line number56 index55 alt1">56</div><div class="line number57 index56 alt2">57</div><div class="line number58 index57 alt1">58</div><div class="line number59 index58 alt2">59</div><div class="line number60 index59 alt1">60</div><div class="line number61 index60 alt2">61</div><div class="line number62 index61 alt1">62</div><div class="line number63 index62 alt2">63</div><div class="line number64 index63 alt1">64</div><div class="line number65 index64 alt2">65</div><div class="line number66 index65 alt1">66</div><div class="line number67 index66 alt2">67</div><div class="line number68 index67 alt1">68</div><div class="line number69 index68 alt2">69</div><div class="line number70 index69 alt1">70</div><div class="line number71 index70 alt2">71</div><div class="line number72 index71 alt1">72</div></td><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="bash preprocessor bold">#!/bin/bash</code></div><div class="line number2 index1 alt1"><code class="bash comments"># Author: Arno0x0x</code></div><div class="line number3 index2 alt2"><code class="bash comments"># Description:</code></div><div class="line number4 index3 alt1"><code class="bash comments">#&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; This script executes some domotic orders based on the command passed as argument.</code></div><div class="line number5 index4 alt2"><code class="bash comments">#&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The network wrapper is Xinetd on port 6868/tcp (domoservices)</code></div><div class="line number6 index5 alt1"><code class="bash comments"># Dependencies:</code></div><div class="line number7 index6 alt2"><code class="bash comments">#&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; This script depends on two binaries to send RF433 commands to remote controled outlets</code></div><div class="line number8 index7 alt1"><code class="bash comments">#&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1. chacon_send : Used to control "Chacon - D-IO" outlets.</code></div><div class="line number9 index8 alt2"><code class="bash comments">#&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Usage: chacon_send &lt;wiringPI pin&gt; &lt;controler code&gt; &lt;outlet code&gt; &lt;on|off&gt;</code></div><div class="line number10 index9 alt1"><code class="bash comments">#&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Ex:&nbsp;&nbsp;&nbsp; chacon_send 0 12325261 1 on</code></div><div class="line number11 index10 alt2"><code class="bash comments">#&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2. phenix_send : Used to control "PHENIX type" outlets. WiringPi pin used is forced to 0 at compile time.</code></div><div class="line number12 index11 alt1"><code class="bash comments">#&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Usage: phenix_send &lt;wiringPI pin&gt; &lt;controler code&gt; &lt;outlet code&gt; &lt;1|0&gt;</code></div><div class="line number13 index12 alt2"><code class="bash comments">#&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Ex:&nbsp;&nbsp;&nbsp; phenix_send 0 10110 1 1</code></div><div class="line number14 index13 alt1">&nbsp;</div><div class="line number15 index14 alt2"><code class="bash comments">#-----------------------------------------------------------------------</code></div><div class="line number16 index15 alt1"><code class="bash comments"># Initialize main variables</code></div><div class="line number17 index16 alt2"><code class="bash comments"># ligth1 = salle a manger | light2 = salon</code></div><div class="line number18 index17 alt1"><code class="bash comments"># heater1 = salon | heater2 = entree</code></div><div class="line number19 index18 alt2"><code class="bash comments">#-----------------------------------------------------------------------</code></div><div class="line number20 index19 alt1"><code class="bash functions">export</code> <code class="bash plain">LANG=en_GB.UTF-8</code></div><div class="line number21 index20 alt2"><code class="bash plain">_rootDir=</code><code class="bash string">"/home/pi/Domotique"</code></div><div class="line number22 index21 alt1"><code class="bash plain">_domoServicesLogFile=</code><code class="bash string">"${_rootDir}/domoservices.log"</code></div><div class="line number23 index22 alt2"><code class="bash plain">_light1_ON=</code><code class="bash string">"sudo ${_rootDir}/phenix_send 0 10110 1 1"</code></div><div class="line number24 index23 alt1"><code class="bash plain">_light1_OFF=</code><code class="bash string">"sudo ${_rootDir}/phenix_send 0 10110 1 0"</code></div><div class="line number25 index24 alt2"><code class="bash plain">_light2_ON=</code><code class="bash string">"sudo ${_rootDir}/phenix_send 0 10110 2 1"</code></div><div class="line number26 index25 alt1"><code class="bash plain">_light2_OFF=</code><code class="bash string">"sudo ${_rootDir}/phenix_send 0 10110 2 0"</code></div><div class="line number27 index26 alt2"><code class="bash plain">_heater1_ON=</code><code class="bash string">"sudo ${_rootDir}/chacon_send 0 12325261 1 on"</code></div><div class="line number28 index27 alt1"><code class="bash plain">_heater1_OFF=</code><code class="bash string">"sudo ${_rootDir}/chacon_send 0 12325261 1 off"</code></div><div class="line number29 index28 alt2"><code class="bash plain">_heater2_ON=</code><code class="bash string">"sudo ${_rootDir}/chacon_send 0 12325261 2 on"</code></div><div class="line number30 index29 alt1"><code class="bash plain">_heater2_OFF=</code><code class="bash string">"sudo ${_rootDir}/chacon_send 0 12325261 2 off"</code></div><div class="line number31 index30 alt2">&nbsp;</div><div class="line number32 index31 alt1"><code class="bash comments">#-----------------------------------------------------------------------</code></div><div class="line number33 index32 alt2"><code class="bash comments"># Read the command passed on stdin</code></div><div class="line number34 index33 alt1"><code class="bash functions">read</code> <code class="bash plain">_command</code></div><div class="line number35 index34 alt2">&nbsp;</div><div class="line number36 index35 alt1"><code class="bash keyword">case</code> <code class="bash plain">${_command} </code><code class="bash keyword">in</code></div><div class="line number37 index36 alt2"><code class="bash spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="bash keyword">case</code> <code class="bash plain">${_command} </code><code class="bash keyword">in</code></div><div class="line number38 index37 alt1"><code class="bash spaces">&nbsp;&nbsp;&nbsp;</code><code class="bash plain">light1ON)</code></div><div class="line number39 index38 alt2"><code class="bash spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="bash plain">${_light1_ON}</code></div><div class="line number40 index39 alt1"><code class="bash spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="bash plain">[[ $? -</code><code class="bash keyword">eq</code> <code class="bash plain">0 ]] || </code><code class="bash functions">echo</code> <code class="bash string">"[ERROR]"</code> <code class="bash plain">&gt;&gt; ${_domoServicesLogFile}</code></div><div class="line number41 index40 alt2"><code class="bash spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="bash plain">;;</code></div><div class="line number42 index41 alt1"><code class="bash spaces">&nbsp;&nbsp;&nbsp;</code><code class="bash plain">light1OFF)</code></div><div class="line number43 index42 alt2"><code class="bash spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="bash plain">${_light1_OFF}</code></div><div class="line number44 index43 alt1"><code class="bash spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="bash plain">[[ $? -</code><code class="bash keyword">eq</code> <code class="bash plain">0 ]] || </code><code class="bash functions">echo</code> <code class="bash string">"[ERROR]"</code> <code class="bash plain">&gt;&gt; ${_domoServicesLogFile}</code></div><div class="line number45 index44 alt2"><code class="bash spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="bash plain">;;</code></div><div class="line number46 index45 alt1"><code class="bash spaces">&nbsp;&nbsp;&nbsp;</code><code class="bash plain">light2ON)</code></div><div class="line number47 index46 alt2"><code class="bash spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="bash plain">${_light2_ON}</code></div><div class="line number48 index47 alt1"><code class="bash spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="bash plain">[[ $? -</code><code class="bash keyword">eq</code> <code class="bash plain">0 ]] || </code><code class="bash functions">echo</code> <code class="bash string">"[ERROR]"</code> <code class="bash plain">&gt;&gt; ${_domoServicesLogFile}</code></div><div class="line number49 index48 alt2"><code class="bash spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="bash plain">;;</code></div><div class="line number50 index49 alt1"><code class="bash spaces">&nbsp;&nbsp;&nbsp;</code><code class="bash plain">light2OFF)</code></div><div class="line number51 index50 alt2"><code class="bash spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="bash plain">${_light2_OFF}</code></div><div class="line number52 index51 alt1"><code class="bash spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="bash plain">[[ $? -</code><code class="bash keyword">eq</code> <code class="bash plain">0 ]] || </code><code class="bash functions">echo</code> <code class="bash string">"[ERROR]"</code> <code class="bash plain">&gt;&gt; ${_domoServicesLogFile}</code></div><div class="line number53 index52 alt2"><code class="bash spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="bash plain">;;</code></div><div class="line number54 index53 alt1"><code class="bash spaces">&nbsp;&nbsp;&nbsp;</code><code class="bash plain">heater1ON)</code></div><div class="line number55 index54 alt2"><code class="bash spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="bash plain">${_heater1_ON}</code></div><div class="line number56 index55 alt1"><code class="bash spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="bash plain">[[ $? -</code><code class="bash keyword">eq</code> <code class="bash plain">0 ]] || </code><code class="bash functions">echo</code> <code class="bash string">"[ERROR]"</code> <code class="bash plain">&gt;&gt; ${_domoServicesLogFile}</code></div><div class="line number57 index56 alt2"><code class="bash spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="bash plain">;;</code></div><div class="line number58 index57 alt1"><code class="bash spaces">&nbsp;&nbsp;&nbsp;</code><code class="bash plain">heater1OFF)</code></div><div class="line number59 index58 alt2"><code class="bash spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="bash plain">${_heater1_OFF}</code></div><div class="line number60 index59 alt1"><code class="bash spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="bash plain">[[ $? -</code><code class="bash keyword">eq</code> <code class="bash plain">0 ]] || </code><code class="bash functions">echo</code> <code class="bash string">"[ERROR]"</code> <code class="bash plain">&gt;&gt; ${_domoServicesLogFile}</code></div><div class="line number61 index60 alt2"><code class="bash spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="bash plain">;;</code></div><div class="line number62 index61 alt1"><code class="bash spaces">&nbsp;&nbsp;&nbsp;</code><code class="bash plain">heater2ON)</code></div><div class="line number63 index62 alt2"><code class="bash spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="bash plain">${_heater2_ON}</code></div><div class="line number64 index63 alt1"><code class="bash spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="bash plain">[[ $? -</code><code class="bash keyword">eq</code> <code class="bash plain">0 ]] || </code><code class="bash functions">echo</code> <code class="bash string">"[ERROR]"</code> <code class="bash plain">&gt;&gt; ${_domoServicesLogFile}</code></div><div class="line number65 index64 alt2"><code class="bash spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="bash plain">;;</code></div><div class="line number66 index65 alt1"><code class="bash spaces">&nbsp;&nbsp;&nbsp;</code><code class="bash plain">heater2OFF)</code></div><div class="line number67 index66 alt2"><code class="bash spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="bash plain">${_heater2_OFF}</code></div><div class="line number68 index67 alt1"><code class="bash spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="bash plain">[[ $? -</code><code class="bash keyword">eq</code> <code class="bash plain">0 ]] || </code><code class="bash functions">echo</code> <code class="bash string">"[ERROR]"</code>&nbsp; <code class="bash plain">&gt;&gt; ${_domoServicesLogFile}</code></div><div class="line number69 index68 alt2"><code class="bash spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="bash plain">;;</code></div><div class="line number70 index69 alt1"><code class="bash spaces">&nbsp;&nbsp;&nbsp;</code><code class="bash plain">*) </code><code class="bash functions">echo</code> <code class="bash string">"[ERROR] UNKNOWN COMMAND"</code></div><div class="line number71 index70 alt2"><code class="bash spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="bash plain">;;</code></div><div class="line number72 index71 alt1"><code class="bash keyword">esac</code></div></div></td></tr></tbody></table></div></div>
+<p style="text-align:justify;">Il y aurait bien sûr moyen d’optimiser ça en ayant qu’une seule commande associée à une variable passée en paramètre indiquant quelle prise on souhaite allumer ou éteindre, mais vu que je n’ai que 4 prises à commander, je vous laisse cette idée comme exercice<img draggable="false" class="emoji" alt="😉" src="./Commandez vos prises électriques à distance avec le Raspberry Pi – arno0x0x_files/1f609.svg" scale="0"></p>
+<p style="text-align:justify;">Tout ceci n’est qu’un début. Il est possible de faire d’autres choses amusantes sur cette base. A titre d’exemple, j’ai défini plusieurs programmes d’allumage/extinction des prises en fonction des jours/heures/minutes, chaque programme étant «&nbsp;Activable / Désactivable&nbsp;» via le même mécanisme de commande à distance.</p>
+<p style="text-align:justify;">In fine, dans un prochain article, une fois que j’aurai couvert un exemple de lecture de température, je montrerai un exemple d’interface web basique que j’ai créé permettant de commander tout ça, d’activer/désactiver les programmes automatiques, de vérifier les journaux (<em>log</em>) d’exécution de ces programmes :</p>
+<p style="text-align:center;"><a href="https://www.dropbox.com/s/i9xds61556hcwbr/rf433_outlet-06.png?dl=0"><img src="./Commandez vos prises électriques à distance avec le Raspberry Pi – arno0x0x_files/rf433_outlet-06.png" scale="0"></a></p>
+<p style="text-align:justify;">A bientôt !</p>
+<p style="text-align:justify;"><img class="aligncenter" src="./Commandez vos prises électriques à distance avec le Raspberry Pi – arno0x0x_files/bitcoin-icon.png" alt="" width="48" height="48" scale="0"></p>
+<p style="text-align:center;"><img class="aligncenter" src="./Commandez vos prises électriques à distance avec le Raspberry Pi – arno0x0x_files/bc_tipping_address.png" alt="" width="268" height="268" scale="0"> Vous aimez cet article ? Faites le savoir avec quelques bitcoins !</p>
+		<div class="wpcnt">
+			<div class="wpa wpmrec" style="display: inline-block !important;">
+				<a class="wpa-about" href="https://en.support.wordpress.com/about-these-ads/" rel="nofollow">Concernant ces publicités</a>
+				        <div id="crt-1410058491" style="width: 300px; height: 250px; display: none;"></div>
+        <script type="text/javascript">
+        var o = document.getElementById('crt-1410058491');
+        if ("undefined"!=typeof Criteo) {
+            var p = o.parentNode;
+            p.style.setProperty('display', 'inline-block', 'important');
+            o.style.setProperty('display', 'block', 'important');
+            Criteo.DisplayAcceptableAdIfAdblocked({zoneid:388248,containerid:"crt-1410058491",collapseContainerIfNotAdblocked:true});
+        } else {
+            o.style.setProperty('display', 'none', 'important');
+        }
+        </script>
+				<div class="u">
+					<script type="text/javascript">
+					(function(g){if("undefined"!=typeof g.__ATA){g.__ATA.initAd({sectionId:26942, width:300, height:250});}})(window);
+					</script><div id="automattic-id-8405" data-section="26942" style="width:300px; height:250px;"><iframe width="300" height="250" style="border:none;width:300px;height:250px;" frameborder="0" scrolling="no" name="fif_slot_automattic-id-_automattic-id-8405" id="fif_slot_automattic-id-_automattic-id-8405" src="javascript:&quot;&lt;html&gt;&lt;body style=&#39;background:transparent;margin:0%;&#39;&gt;&lt;/body&gt;&lt;/html&gt;&quot;"></iframe></div>
+				</div>
+			</div>
+		</div><div id="jp-post-flair" class="sharedaddy sd-like-enabled sd-sharing-enabled"><div class="sharedaddy sd-sharing-enabled"><div class="robots-nocontent sd-block sd-social sd-social-icon-text sd-sharing"><h3 class="sd-title">Partager&nbsp;:</h3><div class="sd-content"><ul><li class="share-twitter"><a rel="nofollow" data-shared="sharing-twitter-132" class="share-twitter sd-button share-icon" href="https://arno0x0x.wordpress.com/2015/04/02/rf433-outlet/?share=twitter&amp;nb=1" target="_blank" title="Partager sur Twitter"><span>Twitter</span></a></li><li class="share-facebook"><a rel="nofollow" data-shared="sharing-facebook-132" class="share-facebook sd-button share-icon" href="https://arno0x0x.wordpress.com/2015/04/02/rf433-outlet/?share=facebook&amp;nb=1" target="_blank" title="Partager sur Facebook"><span>Facebook<span class="share-count">1</span></span></a></li><li class="share-google-plus-1"><a rel="nofollow" data-shared="sharing-google-132" class="share-google-plus-1 sd-button share-icon" href="https://arno0x0x.wordpress.com/2015/04/02/rf433-outlet/?share=google-plus-1&amp;nb=1" target="_blank" title="Cliquez pour partager sur Google+"><span>Google</span></a></li><li class="share-end"></li></ul></div></div></div><div class="sharedaddy sd-block sd-like jetpack-likes-widget-wrapper jetpack-likes-widget-loaded" id="like-post-wrapper-87270482-132-587240bf17520" data-src="//widgets.wp.com/likes/#blog_id=87270482&amp;post_id=132&amp;origin=arno0x0x.wordpress.com&amp;obj_id=87270482-132-587240bf17520" data-name="like-post-frame-87270482-132-587240bf17520"><h3 class="sd-title">J'aime&nbsp;:</h3><div class="likes-widget-placeholder post-likes-widget-placeholder" style="height: 55px; display: none;"><span class="button"><span>J'aime</span></span> <span class="loading">chargement…</span></div><iframe class="post-likes-widget jetpack-likes-widget" name="like-post-frame-87270482-132-587240bf17520" height="55px" width="100%" frameborder="0" src="./Commandez vos prises électriques à distance avec le Raspberry Pi – arno0x0x_files/saved_resource.html"></iframe><span class="sd-text-color"></span><a class="sd-link-color"></a></div>
+<div id="jp-relatedposts" class="jp-relatedposts" style="display: block;">
+	<h3 class="jp-relatedposts-headline"><em>Sur le même thème</em></h3>
+<div class="jp-relatedposts-items jp-relatedposts-items-minimal"><p class="jp-relatedposts-post jp-relatedposts-post0" data-post-id="77" data-post-format="false"><span class="jp-relatedposts-post-title"><a class="jp-relatedposts-post-a" href="https://arno0x0x.wordpress.com/2015/03/22/communication-entre-rpi/" title="Communication entre les deux Raspberry Pi
+
+Comme je l&#39;ai expliqué dans un précédent article qui sert de référence, mon installation est composée, entre autre, de deux Raspberry Pi que je nomme comme suit: Le RPi frontal Le DomoPi Dans cet article je vais expliquer comment faire communiquer les deux RPi, en particulier comment configurer le DomoPi…" rel="nofollow" data-origin="132" data-position="0">Communication entre les deux Raspberry Pi</a></span><span class="jp-relatedposts-post-context">Dans "Domotique"</span></p><p class="jp-relatedposts-post jp-relatedposts-post1" data-post-id="298" data-post-format="false"><span class="jp-relatedposts-post-title"><a class="jp-relatedposts-post-a" href="https://arno0x0x.wordpress.com/2015/06/25/temp-sensor-xbee/" title="Un capteur de température sans fil à base de Xbee (partie 1)
+
+EDIT (30/01/2016): Le régulateur de tension (LD1117V33C) proposé initialement dans cet article fonctionne parfaitement mais possède une consommation interne trop importante, ce qui m&#39;a causé une surconsommation des piles et une tenue d&#39;à peine 3 semaines. Je l&#39;ai donc avantageusement remplacé par un LP2950CZ-3.3, qui délivre 100mA maximum, ce qui…" rel="nofollow" data-origin="132" data-position="1">Un capteur de température sans fil à base de Xbee (partie 1)</a></span><span class="jp-relatedposts-post-context">Dans "Domotique"</span></p><p class="jp-relatedposts-post jp-relatedposts-post2" data-post-id="2" data-post-format="false"><span class="jp-relatedposts-post-title"><a class="jp-relatedposts-post-a" href="https://arno0x0x.wordpress.com/2015/03/17/environnement-de-base/" title="Un réseau domotique et informatique à base de Raspberry Pi
+
+Pour ce premier article, je vous propose d&#39;introduire l&#39;environnement de départ qui sert de base à mes différents projets domotique ou informatique. C&#39;est un article auquel je ferai souvent référence, dans de futurs articles qui iront dans le détail de chaque réalisation/projet. Je présente comment est agencé mon réseau interne,…" rel="nofollow" data-origin="132" data-position="2">Un réseau domotique et informatique à base de Raspberry Pi</a></span><span class="jp-relatedposts-post-context">Dans "Domotique"</span></p></div></div></div>					</div><!-- .entry-content -->
+
+	
+	<footer class="entry-meta entry-footer">
+		<span class="cat-links"><a href="https://arno0x0x.wordpress.com/category/domotique/" rel="category tag">Domotique</a>, <a href="https://arno0x0x.wordpress.com/category/raspberry-pi/" rel="category tag">Raspberry Pi</a></span><span class="tags-links"><a href="https://arno0x0x.wordpress.com/tag/domotique-2/" rel="tag">domotique</a>, <a href="https://arno0x0x.wordpress.com/tag/raspberry-pi/" rel="tag">Raspberry Pi</a></span>	</footer><!-- .entry-footer -->
+</article><!-- #post-132 -->
+				<nav id="nav-below" class="post-navigation clear" role="navigation">
+	
+		<div class="nav-previous"><a href="https://arno0x0x.wordpress.com/2015/03/27/surveiller-systeme-avec-monit/" rel="prev"><span class="meta-nav">Previous Article</span> Surveiller son système avec&nbsp;Monit</a></div>		<div class="nav-next"><a href="https://arno0x0x.wordpress.com/2015/04/05/temp-sensor/" rel="next"><span class="meta-nav">Next Article</span> Lire la température ambiante avec votre Raspberry&nbsp;Pi</a></div>
+	
+	</nav><!-- #nav-below -->
+	
+			
+<div id="comments" class="comments-area">
+
+			<h3 class="widget-title comments-title">
+			27 thoughts on “<span>Commandez vos prises électriques à distance avec le Raspberry&nbsp;Pi</span>”		</h3>
+
+		<ol class="commentlist">
+			
+	<li id="comment-94" class="comment even thread-even depth-1 parent highlander-comment">
+		<article id="div-comment-94" class="comment-body">
+			<div class="comment-meta">
+				<img alt="" src="./Commandez vos prises électriques à distance avec le Raspberry Pi – arno0x0x_files/9e037216e018c204ac6a95d38e9ea8eb" class="avatar avatar-40 grav-hashed grav-hijack" height="40" width="40" originals="40" src-orig="https://0.gravatar.com/avatar/9e037216e018c204ac6a95d38e9ea8eb?s=40&amp;d=identicon&amp;r=G" scale="1.5" id="grav-9e037216e018c204ac6a95d38e9ea8eb-0">				<strong class="comment-author"><cite class="fn">titi</cite></strong>				<span class="comment-date">6 novembre 2016 / 15 h 39 min</span>
+			</div>
+
+			
+			<div class="comment-content">
+				<p>Bonjour, </p>
+<p>j’ai le même problème que ‘CAPITAINABLOC’ au même endroit j’ai ce meessage d’erreur : </p>
+<p>pi@raspberrypi:~/chacon_send $ g++ -o chacon_send chacon_send.cpp -lwiringPi<br>
+chacon_send.cpp: In function ‘int main(int, char**)’:<br>
+chacon_send.cpp:178:14: error: ‘setuid’ was not declared in this scope<br>
+  if (setuid(0))<br>
+              ^<br>
+Avez-vous trouvé une solution ?</p>
+<p>Et merci à l’auteur pour ses tutoriels !</p>
+<p id="comment-like-94" data-liked="comment-not-liked" class="comment-likes comment-not-liked"><a href="https://arno0x0x.wordpress.com/2015/04/02/rf433-outlet/?like_comment=94&amp;_wpnonce=a40045ceb5" class="comment-like-link needs-login" rel="nofollow" data-blog="87270482"><span>J'aime</span></a><span id="comment-like-count-94" class="comment-like-feedback">J'aime</span></p>
+			</div>
+
+			<div class="comment-meta comment-footer">
+								<span class="comment-reply"><a rel="nofollow" class="comment-reply-link" href="https://arno0x0x.wordpress.com/2015/04/02/rf433-outlet/?replytocom=94#respond" onclick="return addComment.moveForm( &quot;div-comment-94&quot;, &quot;94&quot;, &quot;respond&quot;, &quot;132&quot; )" aria-label="Répondre à titi">Répondre</a></span>			</div>
+		</article><!-- #div-comment-94 -->
+
+	<ul class="children">
+
+	<li id="comment-96" class="comment odd alt depth-2 parent highlander-comment">
+		<article id="div-comment-96" class="comment-body">
+			<div class="comment-meta">
+				<img alt="" src="./Commandez vos prises électriques à distance avec le Raspberry Pi – arno0x0x_files/b0c1ddd044f73352223404ec196bdb1c" class="avatar avatar-40 grav-hashed grav-hijack" height="40" width="40" originals="40" src-orig="https://2.gravatar.com/avatar/b0c1ddd044f73352223404ec196bdb1c?s=40&amp;d=identicon&amp;r=G" scale="1.5" id="grav-b0c1ddd044f73352223404ec196bdb1c-0">				<strong class="comment-author"><cite class="fn">titi</cite></strong>				<span class="comment-date">9 novembre 2016 / 15 h 51 min</span>
+			</div>
+
+			
+			<div class="comment-content">
+				<p>Excusez-moi, j’ai vu la réponse plus bas un peu tard:<br>
+il faut ajouter la ligne<br>
+#include unistd.h<br>
+Une fois fait, cela fonctionne, mais  la prise, pourtant du même modèle ne bronche pas d’un poil.<br>
+et je ne reçois aucun message d’erreur lors de la requète.</p>
+<p>Lors du ‘ls -la’ j’obtient un résultat légèrement différent :<br>
+drwxr-xr-x  2 pi pi  4096 Apr  9 20:11 .<br>
+drwxr-xr-x 26 pi pi  4096 Apr  9 20:10 ..<br>
+-rwxr-xr-x  1 pi pi 13177 Apr  9 20:11 chacon_send<br>
+-rw-r–r–  1 pi pi  5686 Apr  6 19:52 chacon_send.cpp<br>
+-rw-r–r–  1 pi pi  6405 Mar  2 18:59 .DS store</p>
+<p>Quelqu’un pourrait m’aider?</p>
+<p>ps:Ce qui est étrange c’est qu’une fois l’émeteur branché la télécommande de la prise ne fonctionne plus qu’à 10 cm de portée?<br>
+Une fois l’émeteur débranché ça re-fonctionne à distance…</p>
+<p id="comment-like-96" data-liked="comment-not-liked" class="comment-likes comment-not-liked"><a href="https://arno0x0x.wordpress.com/2015/04/02/rf433-outlet/?like_comment=96&amp;_wpnonce=8879f8bfca" class="comment-like-link needs-login" rel="nofollow" data-blog="87270482"><span>J'aime</span></a><span id="comment-like-count-96" class="comment-like-feedback">J'aime</span></p>
+			</div>
+
+			<div class="comment-meta comment-footer">
+								<span class="comment-reply"><a rel="nofollow" class="comment-reply-link" href="https://arno0x0x.wordpress.com/2015/04/02/rf433-outlet/?replytocom=96#respond" onclick="return addComment.moveForm( &quot;div-comment-96&quot;, &quot;96&quot;, &quot;respond&quot;, &quot;132&quot; )" aria-label="Répondre à titi">Répondre</a></span>			</div>
+		</article><!-- #div-comment-96 -->
+
+	<ul class="children">
+
+	<li id="comment-97" class="comment even depth-3 highlander-comment">
+		<article id="div-comment-97" class="comment-body">
+			<div class="comment-meta">
+				<img alt="" src="./Commandez vos prises électriques à distance avec le Raspberry Pi – arno0x0x_files/b0c1ddd044f73352223404ec196bdb1c" class="avatar avatar-40 grav-hashed grav-hijack" height="40" width="40" originals="40" src-orig="https://2.gravatar.com/avatar/b0c1ddd044f73352223404ec196bdb1c?s=40&amp;d=identicon&amp;r=G" scale="1.5" id="grav-b0c1ddd044f73352223404ec196bdb1c-1">				<strong class="comment-author"><cite class="fn">titi</cite></strong>				<span class="comment-date">9 novembre 2016 / 20 h 26 min</span>
+			</div>
+
+			
+			<div class="comment-content">
+				<p>j’oubliais ‘d’apprendre’ la commande à la prise… Maintenant ça fonctionne…!<br>
+Merci pour vos super tutos.</p>
+<p id="comment-like-97" data-liked="comment-not-liked" class="comment-likes comment-not-liked"><a href="https://arno0x0x.wordpress.com/2015/04/02/rf433-outlet/?like_comment=97&amp;_wpnonce=a18ac586a0" class="comment-like-link needs-login" rel="nofollow" data-blog="87270482"><span>J'aime</span></a><span id="comment-like-count-97" class="comment-like-feedback">J'aime</span></p>
+			</div>
+
+			<div class="comment-meta comment-footer">
+											</div>
+		</article><!-- #div-comment-97 -->
+
+	</li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+
+	<li id="comment-105" class="comment odd alt depth-2 highlander-comment">
+		<article id="div-comment-105" class="comment-body">
+			<div class="comment-meta">
+				<img alt="" src="./Commandez vos prises électriques à distance avec le Raspberry Pi – arno0x0x_files/abfbd03434b53219defd000823b684e8" class="avatar avatar-40 grav-hashed grav-hijack" height="40" width="40" originals="40" src-orig="https://1.gravatar.com/avatar/abfbd03434b53219defd000823b684e8?s=40&amp;d=identicon&amp;r=G" scale="1.5" id="grav-abfbd03434b53219defd000823b684e8-0">				<strong class="comment-author"><cite class="fn">Tony</cite></strong>				<span class="comment-date">28 novembre 2016 / 9 h 29 min</span>
+			</div>
+
+			
+			<div class="comment-content">
+				<p>Bonjour,</p>
+<p>Merci pour ce super tuto!!!<br>
+Est-il possible avec les prises DIO d’avoir le retour de marche ?<br>
+Hier, j’ai dû envoyer trois fois le code ON pour que la prise marche.<br>
+En ayant, le retour d’information je pourrai connaître l’état de la prise à distance.</p>
+<p>Merci par avance.</p>
+<p id="comment-like-105" data-liked="comment-not-liked" class="comment-likes comment-not-liked"><a href="https://arno0x0x.wordpress.com/2015/04/02/rf433-outlet/?like_comment=105&amp;_wpnonce=ac3551ba3a" class="comment-like-link needs-login" rel="nofollow" data-blog="87270482"><span>J'aime</span></a><span id="comment-like-count-105" class="comment-like-feedback">J'aime</span></p>
+			</div>
+
+			<div class="comment-meta comment-footer">
+								<span class="comment-reply"><a rel="nofollow" class="comment-reply-link" href="https://arno0x0x.wordpress.com/2015/04/02/rf433-outlet/?replytocom=105#respond" onclick="return addComment.moveForm( &quot;div-comment-105&quot;, &quot;105&quot;, &quot;respond&quot;, &quot;132&quot; )" aria-label="Répondre à Tony">Répondre</a></span>			</div>
+		</article><!-- #div-comment-105 -->
+
+	</li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+
+	<li id="comment-93" class="comment even thread-odd thread-alt depth-1 highlander-comment">
+		<article id="div-comment-93" class="comment-body">
+			<div class="comment-meta">
+				<img alt="" src="./Commandez vos prises électriques à distance avec le Raspberry Pi – arno0x0x_files/0b4dcc87c9c6e498096afda1781ba500" class="avatar avatar-40 grav-hashed grav-hijack" height="40" width="40" originals="40" src-orig="https://0.gravatar.com/avatar/0b4dcc87c9c6e498096afda1781ba500?s=40&amp;d=identicon&amp;r=G" scale="1.5" id="grav-0b4dcc87c9c6e498096afda1781ba500-0">				<strong class="comment-author"><cite class="fn">Guillaume</cite></strong>				<span class="comment-date">6 novembre 2016 / 1 h 28 min</span>
+			</div>
+
+			
+			<div class="comment-content">
+				<p>Bonjour,</p>
+<p>Elle semble sympa ta petite interface pour contrôler tes équipements domotique … Simple et efficace !<br>
+Tu pourrais en partager le code ? J’ai un backend fonctionnel sur raspberry (chauffage, lumière, météo &amp; co), mais je n’ai aucune créativité pour le design d’interfaces !</p>
+<p>Merci,<br>
+Guillaume.</p>
+<p id="comment-like-93" data-liked="comment-not-liked" class="comment-likes comment-not-liked"><a href="https://arno0x0x.wordpress.com/2015/04/02/rf433-outlet/?like_comment=93&amp;_wpnonce=12e07037dd" class="comment-like-link needs-login" rel="nofollow" data-blog="87270482"><span>J'aime</span></a><span id="comment-like-count-93" class="comment-like-feedback">J'aime</span></p>
+			</div>
+
+			<div class="comment-meta comment-footer">
+								<span class="comment-reply"><a rel="nofollow" class="comment-reply-link" href="https://arno0x0x.wordpress.com/2015/04/02/rf433-outlet/?replytocom=93#respond" onclick="return addComment.moveForm( &quot;div-comment-93&quot;, &quot;93&quot;, &quot;respond&quot;, &quot;132&quot; )" aria-label="Répondre à Guillaume">Répondre</a></span>			</div>
+		</article><!-- #div-comment-93 -->
+
+	</li><!-- #comment-## -->
+
+	<li id="comment-77" class="comment odd alt thread-even depth-1 parent highlander-comment">
+		<article id="div-comment-77" class="comment-body">
+			<div class="comment-meta">
+				<img alt="" src="./Commandez vos prises électriques à distance avec le Raspberry Pi – arno0x0x_files/ca86cc508dfaf736b6f0395cea7b1ac8" class="avatar avatar-40 grav-hashed grav-hijack" height="40" width="40" originals="40" src-orig="https://0.gravatar.com/avatar/ca86cc508dfaf736b6f0395cea7b1ac8?s=40&amp;d=identicon&amp;r=G" scale="1.5" id="grav-ca86cc508dfaf736b6f0395cea7b1ac8-0">				<strong class="comment-author"><cite class="fn">Campto</cite></strong>				<span class="comment-date">25 avril 2016 / 18 h 56 min</span>
+			</div>
+
+			
+			<div class="comment-content">
+				<p>Bonjour</p>
+<p>J’ai suivi votre tuto et vous en remercie.<br>
+Tout fonctionne lorsque je suis en ssh par contre lorsque je lance via une page Php lorsque je lance un elec, il n’y a que le off qui fonctionne (que je mette on ou off d’ailleurs)</p>
+<p>Avez-vous déjà rencontré le problème?<br>
+Merci par avance pour votre aide.</p>
+<p id="comment-like-77" data-liked="comment-not-liked" class="comment-likes comment-not-liked"><a href="https://arno0x0x.wordpress.com/2015/04/02/rf433-outlet/?like_comment=77&amp;_wpnonce=271491b0a4" class="comment-like-link needs-login" rel="nofollow" data-blog="87270482"><span>J'aime</span></a><span id="comment-like-count-77" class="comment-like-feedback">J'aime</span></p>
+			</div>
+
+			<div class="comment-meta comment-footer">
+								<span class="comment-reply"><a rel="nofollow" class="comment-reply-link" href="https://arno0x0x.wordpress.com/2015/04/02/rf433-outlet/?replytocom=77#respond" onclick="return addComment.moveForm( &quot;div-comment-77&quot;, &quot;77&quot;, &quot;respond&quot;, &quot;132&quot; )" aria-label="Répondre à Campto">Répondre</a></span>			</div>
+		</article><!-- #div-comment-77 -->
+
+	<ul class="children">
+
+	<li id="comment-78" class="comment even depth-2 parent highlander-comment">
+		<article id="div-comment-78" class="comment-body">
+			<div class="comment-meta">
+				<img alt="" src="./Commandez vos prises électriques à distance avec le Raspberry Pi – arno0x0x_files/ca86cc508dfaf736b6f0395cea7b1ac8" class="avatar avatar-40 grav-hashed grav-hijack" height="40" width="40" originals="40" src-orig="https://0.gravatar.com/avatar/ca86cc508dfaf736b6f0395cea7b1ac8?s=40&amp;d=identicon&amp;r=G" scale="1.5" id="grav-ca86cc508dfaf736b6f0395cea7b1ac8-1">				<strong class="comment-author"><cite class="fn">Campto</cite></strong>				<span class="comment-date">25 avril 2016 / 20 h 13 min</span>
+			</div>
+
+			
+			<div class="comment-content">
+				<p>Lorsque je lance exec()</p>
+<p id="comment-like-78" data-liked="comment-not-liked" class="comment-likes comment-not-liked"><a href="https://arno0x0x.wordpress.com/2015/04/02/rf433-outlet/?like_comment=78&amp;_wpnonce=0535eed391" class="comment-like-link needs-login" rel="nofollow" data-blog="87270482"><span>J'aime</span></a><span id="comment-like-count-78" class="comment-like-feedback">J'aime</span></p>
+			</div>
+
+			<div class="comment-meta comment-footer">
+								<span class="comment-reply"><a rel="nofollow" class="comment-reply-link" href="https://arno0x0x.wordpress.com/2015/04/02/rf433-outlet/?replytocom=78#respond" onclick="return addComment.moveForm( &quot;div-comment-78&quot;, &quot;78&quot;, &quot;respond&quot;, &quot;132&quot; )" aria-label="Répondre à Campto">Répondre</a></span>			</div>
+		</article><!-- #div-comment-78 -->
+
+	<ul class="children">
+
+	<li id="comment-80" class="comment odd alt depth-3 highlander-comment">
+		<article id="div-comment-80" class="comment-body">
+			<div class="comment-meta">
+				<img alt="" src="./Commandez vos prises électriques à distance avec le Raspberry Pi – arno0x0x_files/ca86cc508dfaf736b6f0395cea7b1ac8" class="avatar avatar-40 grav-hashed grav-hijack" height="40" width="40" originals="40" src-orig="https://0.gravatar.com/avatar/ca86cc508dfaf736b6f0395cea7b1ac8?s=40&amp;d=identicon&amp;r=G" scale="1.5" id="grav-ca86cc508dfaf736b6f0395cea7b1ac8-2">				<strong class="comment-author"><cite class="fn">Campto</cite></strong>				<span class="comment-date">25 avril 2016 / 22 h 50 min</span>
+			</div>
+
+			
+			<div class="comment-content">
+				<p>C’est bon j’ai réussi en passant pas un bash avec argument</p>
+<p id="comment-like-80" data-liked="comment-not-liked" class="comment-likes comment-not-liked"><a href="https://arno0x0x.wordpress.com/2015/04/02/rf433-outlet/?like_comment=80&amp;_wpnonce=f40baf77f0" class="comment-like-link needs-login" rel="nofollow" data-blog="87270482"><span>J'aime</span></a><span id="comment-like-count-80" class="comment-like-feedback">J'aime</span></p>
+			</div>
+
+			<div class="comment-meta comment-footer">
+											</div>
+		</article><!-- #div-comment-80 -->
+
+	</li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+
+	<li id="comment-71" class="comment even thread-odd thread-alt depth-1 parent highlander-comment">
+		<article id="div-comment-71" class="comment-body">
+			<div class="comment-meta">
+				<img alt="" src="./Commandez vos prises électriques à distance avec le Raspberry Pi – arno0x0x_files/94933ea82e4547e7459b2a44ec0d0e54" class="avatar avatar-40 grav-hashed grav-hijack" height="40" width="40" originals="40" src-orig="https://0.gravatar.com/avatar/94933ea82e4547e7459b2a44ec0d0e54?s=40&amp;d=identicon&amp;r=G" scale="1.5" id="grav-94933ea82e4547e7459b2a44ec0d0e54-0">				<strong class="comment-author"><cite class="fn">Retlaw</cite></strong>				<span class="comment-date">31 mars 2016 / 23 h 22 min</span>
+			</div>
+
+			
+			<div class="comment-content">
+				<p>Bonjour,</p>
+<p>Un grand merci pour ce tuto qui me permet désormais de commander mes prises Chacon depuis mon raspberry! celà va m’être d’une grosse utilité pour l’intégration de ces dernières à ma domotique!</p>
+<p>Une petite question coté interface web.</p>
+<p>J’ai une carte IPX800 à la maison gérant mes radiateurs, ballon eau chaude, portail, volets roulants, porte garage, box internet, lumière extérieur, alarme, capteurs divers (ouverture, facteur, température, etc etc.)</p>
+<p>je pilote cette dernière via impérihome grâce à des requètes http.</p>
+<p>Est-il possible de gérer les script/commandes ON et OFF de chaque prise via de  telles requètes (http)? Je peux passer par une interface web embarquée au sein même du raspberry comme l’exemple proposé, mais il ne me faudrait que 6 prises au total (pas de température puisque déjà gérée par mon IPX)</p>
+<p>Si cela s’avère possible, comment dois-je m’y prendre (je ne m’y connais pas beaucoup en programmation mais je peux mettre les mains dans le cambuis sans problème.</p>
+<p>Merci d’avance pour votre aide!</p>
+<p>Retlaw</p>
+<p id="comment-like-71" data-liked="comment-not-liked" class="comment-likes comment-not-liked"><a href="https://arno0x0x.wordpress.com/2015/04/02/rf433-outlet/?like_comment=71&amp;_wpnonce=0e3114b4d5" class="comment-like-link needs-login" rel="nofollow" data-blog="87270482"><span>J'aime</span></a><span id="comment-like-count-71" class="comment-like-feedback">J'aime</span></p>
+			</div>
+
+			<div class="comment-meta comment-footer">
+								<span class="comment-reply"><a rel="nofollow" class="comment-reply-link" href="https://arno0x0x.wordpress.com/2015/04/02/rf433-outlet/?replytocom=71#respond" onclick="return addComment.moveForm( &quot;div-comment-71&quot;, &quot;71&quot;, &quot;respond&quot;, &quot;132&quot; )" aria-label="Répondre à Retlaw">Répondre</a></span>			</div>
+		</article><!-- #div-comment-71 -->
+
+	<ul class="children">
+
+	<li id="comment-79" class="comment odd alt depth-2 parent highlander-comment">
+		<article id="div-comment-79" class="comment-body">
+			<div class="comment-meta">
+				<img alt="" src="./Commandez vos prises électriques à distance avec le Raspberry Pi – arno0x0x_files/ca86cc508dfaf736b6f0395cea7b1ac8" class="avatar avatar-40 grav-hashed grav-hijack" height="40" width="40" originals="40" src-orig="https://0.gravatar.com/avatar/ca86cc508dfaf736b6f0395cea7b1ac8?s=40&amp;d=identicon&amp;r=G" scale="1.5" id="grav-ca86cc508dfaf736b6f0395cea7b1ac8-3">				<strong class="comment-author"><cite class="fn">Campto</cite></strong>				<span class="comment-date">25 avril 2016 / 20 h 24 min</span>
+			</div>
+
+			
+			<div class="comment-content">
+				<p>Bonjour</p>
+<p>Vous pouvez en installant Apache et php5 sur le Pi<br>
+Ensuite via php et la commande exec (il faudra modifier le fichier /etc/sudoers pour autoriser le compte www-data à exécuter la commande exec)<br>
+Dans la page php, la commande sera :<br>
+Exec(‘Sudo -u www-data repertoirechaconsend/chacon_send 0 12325261 1 on’,$taberreur,$coderetour); pour activer la prise off pour la désactiver</p>
+<p>$taberreur est le tableau contenant les erreurs en type string<br>
+$coderetour le code de retour si différent de 0 alors erreur</p>
+<p>Cordialement</p>
+<p id="comment-like-79" data-liked="comment-not-liked" class="comment-likes comment-not-liked"><a href="https://arno0x0x.wordpress.com/2015/04/02/rf433-outlet/?like_comment=79&amp;_wpnonce=5ff66bad6c" class="comment-like-link needs-login" rel="nofollow" data-blog="87270482"><span>J'aime</span></a><span id="comment-like-count-79" class="comment-like-feedback">J'aime</span></p>
+			</div>
+
+			<div class="comment-meta comment-footer">
+								<span class="comment-reply"><a rel="nofollow" class="comment-reply-link" href="https://arno0x0x.wordpress.com/2015/04/02/rf433-outlet/?replytocom=79#respond" onclick="return addComment.moveForm( &quot;div-comment-79&quot;, &quot;79&quot;, &quot;respond&quot;, &quot;132&quot; )" aria-label="Répondre à Campto">Répondre</a></span>			</div>
+		</article><!-- #div-comment-79 -->
+
+	<ul class="children">
+
+	<li id="comment-81" class="comment even depth-3 highlander-comment">
+		<article id="div-comment-81" class="comment-body">
+			<div class="comment-meta">
+				<img alt="" src="./Commandez vos prises électriques à distance avec le Raspberry Pi – arno0x0x_files/94933ea82e4547e7459b2a44ec0d0e54" class="avatar avatar-40 grav-hashed grav-hijack" height="40" width="40" originals="40" src-orig="https://0.gravatar.com/avatar/94933ea82e4547e7459b2a44ec0d0e54?s=40&amp;d=identicon&amp;r=G" scale="1.5" id="grav-94933ea82e4547e7459b2a44ec0d0e54-1">				<strong class="comment-author"><cite class="fn">Retlaw</cite></strong>				<span class="comment-date">27 avril 2016 / 15 h 10 min</span>
+			</div>
+
+			
+			<div class="comment-content">
+				<p>Merci pour votre réponse!</p>
+<p>Je pense avoir compris le principe. Je teste ça d’ici un mois une fois l’emménagement terminé et vous tiens au courant!</p>
+<p id="comment-like-81" data-liked="comment-not-liked" class="comment-likes comment-not-liked"><a href="https://arno0x0x.wordpress.com/2015/04/02/rf433-outlet/?like_comment=81&amp;_wpnonce=367ce3f227" class="comment-like-link needs-login" rel="nofollow" data-blog="87270482"><span>J'aime</span></a><span id="comment-like-count-81" class="comment-like-feedback">J'aime</span></p>
+			</div>
+
+			<div class="comment-meta comment-footer">
+											</div>
+		</article><!-- #div-comment-81 -->
+
+	</li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+
+	<li id="comment-67" class="comment odd alt thread-even depth-1 parent highlander-comment">
+		<article id="div-comment-67" class="comment-body">
+			<div class="comment-meta">
+				<img alt="" src="./Commandez vos prises électriques à distance avec le Raspberry Pi – arno0x0x_files/26f767df94f11be2b011a0a243ff91fa" class="avatar avatar-40 grav-hashed grav-hijack" height="40" width="40" originals="40" src-orig="https://2.gravatar.com/avatar/26f767df94f11be2b011a0a243ff91fa?s=40&amp;d=identicon&amp;r=G" scale="1.5" id="grav-26f767df94f11be2b011a0a243ff91fa-0">				<strong class="comment-author"><cite class="fn">Camille DURET</cite></strong>				<span class="comment-date">28 mars 2016 / 11 h 03 min</span>
+			</div>
+
+			
+			<div class="comment-content">
+				<p>Bonjour CAPITAINABLOC,</p>
+<p>As tu résolu ton problème ?<br>
+J’ai le meme problème que toi quand j’essaye de compiler :</p>
+<p>pi@raspberrypi:~/chacon_send $ g++ -o chacon_send chacon_send.cpp -lwiringPi<br>
+chacon_send.cpp: In function ‘int main(int, char**)’:<br>
+chacon_send.cpp:178:14: error: ‘setuid’ was not declared in this scope<br>
+  if (setuid(0))<br>
+              ^<br>
+Merci beaucoup</p>
+<p id="comment-like-67" data-liked="comment-not-liked" class="comment-likes comment-not-liked"><a href="https://arno0x0x.wordpress.com/2015/04/02/rf433-outlet/?like_comment=67&amp;_wpnonce=eab50e2297" class="comment-like-link needs-login" rel="nofollow" data-blog="87270482"><span>J'aime</span></a><span id="comment-like-count-67" class="comment-like-feedback">J'aime</span></p>
+			</div>
+
+			<div class="comment-meta comment-footer">
+								<span class="comment-reply"><a rel="nofollow" class="comment-reply-link" href="https://arno0x0x.wordpress.com/2015/04/02/rf433-outlet/?replytocom=67#respond" onclick="return addComment.moveForm( &quot;div-comment-67&quot;, &quot;67&quot;, &quot;respond&quot;, &quot;132&quot; )" aria-label="Répondre à Camille DURET">Répondre</a></span>			</div>
+		</article><!-- #div-comment-67 -->
+
+	<ul class="children">
+
+	<li id="comment-68" class="comment byuser comment-author-arno0x0x bypostauthor even depth-2 parent highlander-comment">
+		<article id="div-comment-68" class="comment-body">
+			<div class="comment-meta">
+				<img alt="" src="./Commandez vos prises électriques à distance avec le Raspberry Pi – arno0x0x_files/7720eb894ec746625af3d6c06450bde0" class="avatar avatar-40 grav-hashed grav-hijack" height="40" width="40" originals="40" src-orig="https://1.gravatar.com/avatar/7720eb894ec746625af3d6c06450bde0?s=40&amp;d=identicon&amp;r=G" scale="1.5" id="grav-7720eb894ec746625af3d6c06450bde0-0">				<strong class="comment-author"><cite class="fn"><a href="https://arno0x0x.wordpress.com/" rel="external nofollow" class="url">arno0x0x</a></cite></strong>				<span class="comment-date">28 mars 2016 / 12 h 52 min</span>
+			</div>
+
+			
+			<div class="comment-content">
+				<p>Comme l’a souligné CAPTAINABLOC, c’est peut-être un souci de compilation lié à la dernière version de Raspbian (v8 basée sur la Debian Jessie). Je n’ai eu aucun problème à compiler le script sur mes différents RPi (A ou B et même RPi2A), mais n’ayant pas de RPi tournant sous Raspbian 8, je ne peux pas tester ou vérifier d’où vient le problème…</p>
+<p id="comment-like-68" data-liked="comment-not-liked" class="comment-likes comment-not-liked"><a href="https://arno0x0x.wordpress.com/2015/04/02/rf433-outlet/?like_comment=68&amp;_wpnonce=a902698dc8" class="comment-like-link needs-login" rel="nofollow" data-blog="87270482"><span>J'aime</span></a><span id="comment-like-count-68" class="comment-like-feedback">J'aime</span></p>
+			</div>
+
+			<div class="comment-meta comment-footer">
+								<span class="comment-reply"><a rel="nofollow" class="comment-reply-link" href="https://arno0x0x.wordpress.com/2015/04/02/rf433-outlet/?replytocom=68#respond" onclick="return addComment.moveForm( &quot;div-comment-68&quot;, &quot;68&quot;, &quot;respond&quot;, &quot;132&quot; )" aria-label="Répondre à arno0x0x">Répondre</a></span>			</div>
+		</article><!-- #div-comment-68 -->
+
+	<ul class="children">
+
+	<li id="comment-69" class="comment byuser comment-author-capitainabloc odd alt depth-3 parent highlander-comment">
+		<article id="div-comment-69" class="comment-body">
+			<div class="comment-meta">
+				<img alt="" src="./Commandez vos prises électriques à distance avec le Raspberry Pi – arno0x0x_files/b61549b7568d5bcc9cbdf7073b302ba8" class="avatar avatar-40 grav-hashed grav-hijack" height="40" width="40" originals="40" src-orig="https://2.gravatar.com/avatar/b61549b7568d5bcc9cbdf7073b302ba8?s=40&amp;d=identicon&amp;r=G" scale="1.5" id="grav-b61549b7568d5bcc9cbdf7073b302ba8-0">				<strong class="comment-author"><cite class="fn"><a href="http://gravatar.com/capitainabloc" rel="external nofollow" class="url">capitainabloc</a></cite></strong>				<span class="comment-date">28 mars 2016 / 13 h 06 min</span>
+			</div>
+
+			
+			<div class="comment-content">
+				<p>bonjour,<br>
+comme dit précedemment, il faut ajouter la ligne<br>
+#include unistd.h</p>
+<p>la mise en page wordpress enlève les signes «&nbsp;&gt;&nbsp;» et «&nbsp;&lt;", mais il faut utiliser la même mise en page que pour les autre #include du fichier cpp.</p>
+<p id="comment-like-69" data-liked="comment-not-liked" class="comment-likes comment-not-liked"><a href="https://arno0x0x.wordpress.com/2015/04/02/rf433-outlet/?like_comment=69&amp;_wpnonce=a5d21b731d" class="comment-like-link needs-login" rel="nofollow" data-blog="87270482"><span>J'aime</span></a><span id="comment-like-count-69" class="comment-like-feedback">J'aime</span></p>
+			</div>
+
+			<div class="comment-meta comment-footer">
+											</div>
+		</article><!-- #div-comment-69 -->
+
+	</li><!-- #comment-## -->
+
+	<li id="comment-70" class="comment even depth-3 highlander-comment">
+		<article id="div-comment-70" class="comment-body">
+			<div class="comment-meta">
+				<img alt="" src="./Commandez vos prises électriques à distance avec le Raspberry Pi – arno0x0x_files/26f767df94f11be2b011a0a243ff91fa" class="avatar avatar-40 grav-hashed grav-hijack" height="40" width="40" originals="40" src-orig="https://2.gravatar.com/avatar/26f767df94f11be2b011a0a243ff91fa?s=40&amp;d=identicon&amp;r=G" scale="1.5" id="grav-26f767df94f11be2b011a0a243ff91fa-1">				<strong class="comment-author"><cite class="fn">Camille DURET</cite></strong>				<span class="comment-date">28 mars 2016 / 14 h 07 min</span>
+			</div>
+
+			
+			<div class="comment-content">
+				<p>Au top , ça fonctionne très bien !</p>
+<p>Merci beaucoup !!!</p>
+<p id="comment-like-70" data-liked="comment-not-liked" class="comment-likes comment-not-liked"><a href="https://arno0x0x.wordpress.com/2015/04/02/rf433-outlet/?like_comment=70&amp;_wpnonce=771ed56a4c" class="comment-like-link needs-login" rel="nofollow" data-blog="87270482"><span>J'aime</span></a><span id="comment-like-count-70" class="comment-like-feedback">J'aime</span></p>
+			</div>
+
+			<div class="comment-meta comment-footer">
+											</div>
+		</article><!-- #div-comment-70 -->
+
+	</li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+
+	<li id="comment-64" class="comment odd alt thread-odd thread-alt depth-1 highlander-comment">
+		<article id="div-comment-64" class="comment-body">
+			<div class="comment-meta">
+				<img alt="" src="./Commandez vos prises électriques à distance avec le Raspberry Pi – arno0x0x_files/419f1b706fdb2832ca90b865d634828d" class="avatar avatar-40 grav-hashed grav-hijack" height="40" width="40" originals="40" src-orig="https://1.gravatar.com/avatar/419f1b706fdb2832ca90b865d634828d?s=40&amp;d=identicon&amp;r=G" scale="1.5" id="grav-419f1b706fdb2832ca90b865d634828d-0">				<strong class="comment-author"><cite class="fn">Jeremy</cite></strong>				<span class="comment-date">28 février 2016 / 15 h 53 min</span>
+			</div>
+
+			
+			<div class="comment-content">
+				<p>Bonjour,</p>
+<p>J’ai exactement le même problème que capitainabloc. Je me demande si ce n’est pas une incomptibilité avec Raspbian Jessie car ça fonctionne très bien sur mon autre raspberry (qui a une ancienne version de raspbian).</p>
+<p>Quelqu’un sait-il comment on pourrait résoudre ce problème ?</p>
+<p>Merci.</p>
+<p id="comment-like-64" data-liked="comment-not-liked" class="comment-likes comment-not-liked"><a href="https://arno0x0x.wordpress.com/2015/04/02/rf433-outlet/?like_comment=64&amp;_wpnonce=f62e429ede" class="comment-like-link needs-login" rel="nofollow" data-blog="87270482"><span>J'aime</span></a><span id="comment-like-count-64" class="comment-like-feedback">J'aime</span></p>
+			</div>
+
+			<div class="comment-meta comment-footer">
+								<span class="comment-reply"><a rel="nofollow" class="comment-reply-link" href="https://arno0x0x.wordpress.com/2015/04/02/rf433-outlet/?replytocom=64#respond" onclick="return addComment.moveForm( &quot;div-comment-64&quot;, &quot;64&quot;, &quot;respond&quot;, &quot;132&quot; )" aria-label="Répondre à Jeremy">Répondre</a></span>			</div>
+		</article><!-- #div-comment-64 -->
+
+	</li><!-- #comment-## -->
+
+	<li id="comment-61" class="comment even thread-even depth-1 parent highlander-comment">
+		<article id="div-comment-61" class="comment-body">
+			<div class="comment-meta">
+				<img alt="" src="./Commandez vos prises électriques à distance avec le Raspberry Pi – arno0x0x_files/9a9d6e3e7476a2105ec1d896ea00a8f9" class="avatar avatar-40 grav-hashed grav-hijack" height="40" width="40" originals="40" src-orig="https://0.gravatar.com/avatar/9a9d6e3e7476a2105ec1d896ea00a8f9?s=40&amp;d=identicon&amp;r=G" scale="1.5" id="grav-9a9d6e3e7476a2105ec1d896ea00a8f9-0">				<strong class="comment-author"><cite class="fn">fred</cite></strong>				<span class="comment-date">27 février 2016 / 13 h 26 min</span>
+			</div>
+
+			
+			<div class="comment-content">
+				<p>Bonjour,<br>
+merci pour ce tuto, vraiment impeccable.<br>
+Les commande «&nbsp;chacon_send 0 12325261 1 on&nbsp;» ou «&nbsp;off&nbsp;» marchent très bien, sauf avec une crontab ou seul la commande «&nbsp;off&nbsp;» fonctionne, je n’arrive pas envoyer le «&nbsp;on&nbsp;».<br>
+Avez vous une idée ?<br>
+Merci.<br>
+fred.</p>
+<p id="comment-like-61" data-liked="comment-not-liked" class="comment-likes comment-not-liked"><a href="https://arno0x0x.wordpress.com/2015/04/02/rf433-outlet/?like_comment=61&amp;_wpnonce=64074e23e2" class="comment-like-link needs-login" rel="nofollow" data-blog="87270482"><span>J'aime</span></a><span id="comment-like-count-61" class="comment-like-feedback">J'aime</span></p>
+			</div>
+
+			<div class="comment-meta comment-footer">
+								<span class="comment-reply"><a rel="nofollow" class="comment-reply-link" href="https://arno0x0x.wordpress.com/2015/04/02/rf433-outlet/?replytocom=61#respond" onclick="return addComment.moveForm( &quot;div-comment-61&quot;, &quot;61&quot;, &quot;respond&quot;, &quot;132&quot; )" aria-label="Répondre à fred">Répondre</a></span>			</div>
+		</article><!-- #div-comment-61 -->
+
+	<ul class="children">
+
+	<li id="comment-62" class="comment byuser comment-author-arno0x0x bypostauthor odd alt depth-2 parent highlander-comment">
+		<article id="div-comment-62" class="comment-body">
+			<div class="comment-meta">
+				<img alt="" src="./Commandez vos prises électriques à distance avec le Raspberry Pi – arno0x0x_files/7720eb894ec746625af3d6c06450bde0" class="avatar avatar-40 grav-hashed grav-hijack" height="40" width="40" originals="40" src-orig="https://1.gravatar.com/avatar/7720eb894ec746625af3d6c06450bde0?s=40&amp;d=identicon&amp;r=G" scale="1.5" id="grav-7720eb894ec746625af3d6c06450bde0-1">				<strong class="comment-author"><cite class="fn"><a href="https://arno0x0x.wordpress.com/" rel="external nofollow" class="url">arno0x0x</a></cite></strong>				<span class="comment-date">27 février 2016 / 17 h 53 min</span>
+			</div>
+
+			
+			<div class="comment-content">
+				<p>Bonjour, merci pour votre commentaire.</p>
+<p>C’est en effet très étrange. Pouvez-vous montrer le crontab complet en exemple (je pense par exemple à des commandes/accès concurrents à l’émetteur, mais c’est une piste incertaine) ?<br>
+Merci,<br>
+Arno</p>
+<p id="comment-like-62" data-liked="comment-not-liked" class="comment-likes comment-not-liked"><a href="https://arno0x0x.wordpress.com/2015/04/02/rf433-outlet/?like_comment=62&amp;_wpnonce=ccb26cdff2" class="comment-like-link needs-login" rel="nofollow" data-blog="87270482"><span>J'aime</span></a><span id="comment-like-count-62" class="comment-like-feedback">J'aime</span></p>
+			</div>
+
+			<div class="comment-meta comment-footer">
+								<span class="comment-reply"><a rel="nofollow" class="comment-reply-link" href="https://arno0x0x.wordpress.com/2015/04/02/rf433-outlet/?replytocom=62#respond" onclick="return addComment.moveForm( &quot;div-comment-62&quot;, &quot;62&quot;, &quot;respond&quot;, &quot;132&quot; )" aria-label="Répondre à arno0x0x">Répondre</a></span>			</div>
+		</article><!-- #div-comment-62 -->
+
+	<ul class="children">
+
+	<li id="comment-63" class="comment even depth-3 highlander-comment">
+		<article id="div-comment-63" class="comment-body">
+			<div class="comment-meta">
+				<img alt="" src="./Commandez vos prises électriques à distance avec le Raspberry Pi – arno0x0x_files/9a9d6e3e7476a2105ec1d896ea00a8f9" class="avatar avatar-40 grav-hashed grav-hijack" height="40" width="40" originals="40" src-orig="https://0.gravatar.com/avatar/9a9d6e3e7476a2105ec1d896ea00a8f9?s=40&amp;d=identicon&amp;r=G" scale="1.5" id="grav-9a9d6e3e7476a2105ec1d896ea00a8f9-1">				<strong class="comment-author"><cite class="fn">fred</cite></strong>				<span class="comment-date">28 février 2016 / 12 h 19 min</span>
+			</div>
+
+			
+			<div class="comment-content">
+				<p>Merci pour votre réponse.<br>
+Je viens de voir que le souci ne viens pas du tout de la commande, mais de la façon dont j’insère la ligne dans la crontab.<br>
+Je me suis fais une interface web (php) pour contrôler la crontab. de cette manière le «&nbsp;on&nbsp;» ne fonctionne pas. Mais si j’ouvre et enregistre avec crontab -e, le problème disparait.</p>
+<p># Mise en route cafetière du matin<br>
+0 6 * * 1-5 /usr/local/bin/chacon_send 0 12325261 1 on<br>
+31 11 * * * /usr/local/bin/chacon_send 0 12325261 1 on<br>
+33 11 * * * /usr/local/bin/chacon_send 0 12325261 1 off<br>
+# Arrêt de la cafetière du matin<br>
+0 20 * * 1-5 /usr/local/bin/chacon_send 0 12325261 1 off<br>
+0 20 * * 7 /usr/local/bin/chacon_send 0 12325261 1 off</p>
+<p>ici le on de 11h31 ne fonctionne plus puisque j’ai rentré 11h33 par l’interface web. Mais 11h33 fonctionne bien.</p>
+<p>Merci.<br>
+fred</p>
+<p id="comment-like-63" data-liked="comment-not-liked" class="comment-likes comment-not-liked"><a href="https://arno0x0x.wordpress.com/2015/04/02/rf433-outlet/?like_comment=63&amp;_wpnonce=ff8af15f56" class="comment-like-link needs-login" rel="nofollow" data-blog="87270482"><span>J'aime</span></a><span id="comment-like-count-63" class="comment-like-feedback">J'aime</span></p>
+			</div>
+
+			<div class="comment-meta comment-footer">
+											</div>
+		</article><!-- #div-comment-63 -->
+
+	</li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+
+	<li id="comment-38" class="comment byuser comment-author-capitainabloc odd alt thread-odd thread-alt depth-1 parent highlander-comment">
+		<article id="div-comment-38" class="comment-body">
+			<div class="comment-meta">
+				<img alt="" src="./Commandez vos prises électriques à distance avec le Raspberry Pi – arno0x0x_files/b61549b7568d5bcc9cbdf7073b302ba8" class="avatar avatar-40 grav-hashed grav-hijack" height="40" width="40" originals="40" src-orig="https://2.gravatar.com/avatar/b61549b7568d5bcc9cbdf7073b302ba8?s=40&amp;d=identicon&amp;r=G" scale="1.5" id="grav-b61549b7568d5bcc9cbdf7073b302ba8-1">				<strong class="comment-author"><cite class="fn"><a href="http://gravatar.com/capitainabloc" rel="external nofollow" class="url">capitainabloc</a></cite></strong>				<span class="comment-date">13 octobre 2015 / 9 h 08 min</span>
+			</div>
+
+			
+			<div class="comment-content">
+				<p>Bon, j’ai trouvé!!</p>
+<p>il faut éditer le fichier ~/chacon_send/chacon_send.cpp</p>
+<p>et y ajouter au début:<br>
+#include </p>
+<p>et ca fonctionne!</p>
+<p>merci!</p>
+<p id="comment-like-38" data-liked="comment-not-liked" class="comment-likes comment-not-liked"><a href="https://arno0x0x.wordpress.com/2015/04/02/rf433-outlet/?like_comment=38&amp;_wpnonce=ca0ac9367f" class="comment-like-link needs-login" rel="nofollow" data-blog="87270482"><span>J'aime</span></a><span id="comment-like-count-38" class="comment-like-feedback">J'aime</span></p>
+			</div>
+
+			<div class="comment-meta comment-footer">
+								<span class="comment-reply"><a rel="nofollow" class="comment-reply-link" href="https://arno0x0x.wordpress.com/2015/04/02/rf433-outlet/?replytocom=38#respond" onclick="return addComment.moveForm( &quot;div-comment-38&quot;, &quot;38&quot;, &quot;respond&quot;, &quot;132&quot; )" aria-label="Répondre à capitainabloc">Répondre</a></span>			</div>
+		</article><!-- #div-comment-38 -->
+
+	<ul class="children">
+
+	<li id="comment-39" class="comment byuser comment-author-capitainabloc even depth-2 parent highlander-comment">
+		<article id="div-comment-39" class="comment-body">
+			<div class="comment-meta">
+				<img alt="" src="./Commandez vos prises électriques à distance avec le Raspberry Pi – arno0x0x_files/b61549b7568d5bcc9cbdf7073b302ba8" class="avatar avatar-40 grav-hashed grav-hijack" height="40" width="40" originals="40" src-orig="https://2.gravatar.com/avatar/b61549b7568d5bcc9cbdf7073b302ba8?s=40&amp;d=identicon&amp;r=G" scale="1.5" id="grav-b61549b7568d5bcc9cbdf7073b302ba8-2">				<strong class="comment-author"><cite class="fn"><a href="http://gravatar.com/capitainabloc" rel="external nofollow" class="url">capitainabloc</a></cite></strong>				<span class="comment-date">13 octobre 2015 / 9 h 10 min</span>
+			</div>
+
+			
+			<div class="comment-content">
+				<p>il a pas pris la commande c’est donc #include unistd.h, avec  autour de unistd.h</p>
+<p id="comment-like-39" data-liked="comment-not-liked" class="comment-likes comment-not-liked"><a href="https://arno0x0x.wordpress.com/2015/04/02/rf433-outlet/?like_comment=39&amp;_wpnonce=36ef7e3d05" class="comment-like-link needs-login" rel="nofollow" data-blog="87270482"><span>J'aime</span></a><span id="comment-like-count-39" class="comment-like-feedback">J'aime</span></p>
+			</div>
+
+			<div class="comment-meta comment-footer">
+								<span class="comment-reply"><a rel="nofollow" class="comment-reply-link" href="https://arno0x0x.wordpress.com/2015/04/02/rf433-outlet/?replytocom=39#respond" onclick="return addComment.moveForm( &quot;div-comment-39&quot;, &quot;39&quot;, &quot;respond&quot;, &quot;132&quot; )" aria-label="Répondre à capitainabloc">Répondre</a></span>			</div>
+		</article><!-- #div-comment-39 -->
+
+	<ul class="children">
+
+	<li id="comment-40" class="comment byuser comment-author-arno0x0x bypostauthor odd alt depth-3 highlander-comment">
+		<article id="div-comment-40" class="comment-body">
+			<div class="comment-meta">
+				<img alt="" src="./Commandez vos prises électriques à distance avec le Raspberry Pi – arno0x0x_files/7720eb894ec746625af3d6c06450bde0" class="avatar avatar-40 grav-hashed grav-hijack" height="40" width="40" originals="40" src-orig="https://1.gravatar.com/avatar/7720eb894ec746625af3d6c06450bde0?s=40&amp;d=identicon&amp;r=G" scale="1.5" id="grav-7720eb894ec746625af3d6c06450bde0-2">				<strong class="comment-author"><cite class="fn"><a href="https://arno0x0x.wordpress.com/" rel="external nofollow" class="url">arno0x0x</a></cite></strong>				<span class="comment-date">13 octobre 2015 / 9 h 12 min</span>
+			</div>
+
+			
+			<div class="comment-content">
+				<p>ok, merci d’avoir mis à jour, ça pourra servir à d’autres personnes.</p>
+<p>C’était bien le header unistd.h dont je t’avais parlé. Ce que je ne comprends pas c’est pourquoi ça compile sans problème sur plusieurs de mes RPi sans avoir à rajouter le #include en question.</p>
+<p id="comment-like-40" data-liked="comment-not-liked" class="comment-likes comment-not-liked"><a href="https://arno0x0x.wordpress.com/2015/04/02/rf433-outlet/?like_comment=40&amp;_wpnonce=741146756a" class="comment-like-link needs-login" rel="nofollow" data-blog="87270482"><span>J'aime</span></a><span id="comment-like-count-40" class="comment-like-feedback">J'aime</span></p>
+			</div>
+
+			<div class="comment-meta comment-footer">
+											</div>
+		</article><!-- #div-comment-40 -->
+
+	</li><!-- #comment-## -->
+
+	<li id="comment-95" class="comment even depth-3 highlander-comment">
+		<article id="div-comment-95" class="comment-body">
+			<div class="comment-meta">
+				<img alt="" src="./Commandez vos prises électriques à distance avec le Raspberry Pi – arno0x0x_files/c19952c59bb2e2b25f3cb81b301a3234" class="avatar avatar-40 grav-hashed grav-hijack" height="40" width="40" originals="40" src-orig="https://0.gravatar.com/avatar/c19952c59bb2e2b25f3cb81b301a3234?s=40&amp;d=identicon&amp;r=G" scale="1.5" id="grav-c19952c59bb2e2b25f3cb81b301a3234-0">				<strong class="comment-author"><cite class="fn">Belze88</cite></strong>				<span class="comment-date">8 novembre 2016 / 23 h 12 min</span>
+			</div>
+
+			
+			<div class="comment-content">
+				<p>Merci, j’ai eu le même problème et ça m’a bien débloqué ! ( NB : penser au chevrons autour de unistd.h comme pour les autres include)</p>
+<p id="comment-like-95" data-liked="comment-not-liked" class="comment-likes comment-not-liked"><a href="https://arno0x0x.wordpress.com/2015/04/02/rf433-outlet/?like_comment=95&amp;_wpnonce=52aca335a8" class="comment-like-link needs-login" rel="nofollow" data-blog="87270482"><span>J'aime</span></a><span id="comment-like-count-95" class="comment-like-feedback">J'aime</span></p>
+			</div>
+
+			<div class="comment-meta comment-footer">
+											</div>
+		</article><!-- #div-comment-95 -->
+
+	</li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+
+	<li id="comment-35" class="comment odd alt thread-even depth-1 parent highlander-comment">
+		<article id="div-comment-35" class="comment-body">
+			<div class="comment-meta">
+				<img alt="" src="./Commandez vos prises électriques à distance avec le Raspberry Pi – arno0x0x_files/b61549b7568d5bcc9cbdf7073b302ba8" class="avatar avatar-40 grav-hashed grav-hijack" height="40" width="40" originals="40" src-orig="https://2.gravatar.com/avatar/b61549b7568d5bcc9cbdf7073b302ba8?s=40&amp;d=identicon&amp;r=G" scale="1.5" id="grav-b61549b7568d5bcc9cbdf7073b302ba8-3">				<strong class="comment-author"><cite class="fn"><a href="http://gravatar.com/capitainabloc" rel="external nofollow" class="url">capitainablocClem</a></cite></strong>				<span class="comment-date">13 octobre 2015 / 8 h 12 min</span>
+			</div>
+
+			
+			<div class="comment-content">
+				<p>Bonjour,<br>
+merci pour ce tuto.<br>
+J’essaie de le mettre en oeuvre, mais je bloque dès le début sur une erreur lors de la commande:<br>
+g++ -o chacon_send chacon_send.cpp -lwiringPi</p>
+<p>j’obtiens l’erreur suivante:<br>
+chacon_send.cpp: In function ‘int main(int, char**)’:<br>
+chacon_send.cpp:178:14: error: ‘setuid’ was not declared in this scope<br>
+  if (setuid(0))<br>
+              ^</p>
+<p>Aurais-tu une piste pour résoudre ce problème?</p>
+<p>Clem</p>
+<p id="comment-like-35" data-liked="comment-not-liked" class="comment-likes comment-not-liked"><a href="https://arno0x0x.wordpress.com/2015/04/02/rf433-outlet/?like_comment=35&amp;_wpnonce=26237a6c3e" class="comment-like-link needs-login" rel="nofollow" data-blog="87270482"><span>J'aime</span></a><span id="comment-like-count-35" class="comment-like-feedback">J'aime</span></p>
+			</div>
+
+			<div class="comment-meta comment-footer">
+								<span class="comment-reply"><a rel="nofollow" class="comment-reply-link" href="https://arno0x0x.wordpress.com/2015/04/02/rf433-outlet/?replytocom=35#respond" onclick="return addComment.moveForm( &quot;div-comment-35&quot;, &quot;35&quot;, &quot;respond&quot;, &quot;132&quot; )" aria-label="Répondre à capitainablocClem">Répondre</a></span>			</div>
+		</article><!-- #div-comment-35 -->
+
+	<ul class="children">
+
+	<li id="comment-36" class="comment byuser comment-author-arno0x0x bypostauthor even depth-2 parent highlander-comment">
+		<article id="div-comment-36" class="comment-body">
+			<div class="comment-meta">
+				<img alt="" src="./Commandez vos prises électriques à distance avec le Raspberry Pi – arno0x0x_files/7720eb894ec746625af3d6c06450bde0" class="avatar avatar-40 grav-hashed grav-hijack" height="40" width="40" originals="40" src-orig="https://1.gravatar.com/avatar/7720eb894ec746625af3d6c06450bde0?s=40&amp;d=identicon&amp;r=G" scale="1.5" id="grav-7720eb894ec746625af3d6c06450bde0-3">				<strong class="comment-author"><cite class="fn"><a href="https://arno0x0x.wordpress.com/" rel="external nofollow" class="url">arno0x0x</a></cite></strong>				<span class="comment-date">13 octobre 2015 / 8 h 33 min</span>
+			</div>
+
+			
+			<div class="comment-content">
+				<p>Salut,</p>
+<p>Est-ce sur un Raspberry Pi avec l’install raspbian par défaut ?</p>
+<p>Il se pourrait qu’il te manque le header «&nbsp;unistd.h&nbsp;» qui est livré avec la package libc6-dev (sudo apt-get update &amp;&amp; sudo apt-get install libc6-dev).</p>
+<p>C’est une piste en tous cas<img draggable="false" class="emoji" alt="🙂" src="./Commandez vos prises électriques à distance avec le Raspberry Pi – arno0x0x_files/1f642.svg" scale="0"><br>
+Arno</p>
+<p id="comment-like-36" data-liked="comment-not-liked" class="comment-likes comment-not-liked"><a href="https://arno0x0x.wordpress.com/2015/04/02/rf433-outlet/?like_comment=36&amp;_wpnonce=5dde931b92" class="comment-like-link needs-login" rel="nofollow" data-blog="87270482"><span>J'aime</span></a><span id="comment-like-count-36" class="comment-like-feedback">Aimé par <a href="https://arno0x0x.wordpress.com/2015/04/02/rf433-outlet/#" class="view-likers" data-like-count="1">1 personne</a></span></p>
+			</div>
+
+			<div class="comment-meta comment-footer">
+								<span class="comment-reply"><a rel="nofollow" class="comment-reply-link" href="https://arno0x0x.wordpress.com/2015/04/02/rf433-outlet/?replytocom=36#respond" onclick="return addComment.moveForm( &quot;div-comment-36&quot;, &quot;36&quot;, &quot;respond&quot;, &quot;132&quot; )" aria-label="Répondre à arno0x0x">Répondre</a></span>			</div>
+		</article><!-- #div-comment-36 -->
+
+	<ul class="children">
+
+	<li id="comment-37" class="comment byuser comment-author-capitainabloc odd alt depth-3 highlander-comment">
+		<article id="div-comment-37" class="comment-body">
+			<div class="comment-meta">
+				<img alt="" src="./Commandez vos prises électriques à distance avec le Raspberry Pi – arno0x0x_files/b61549b7568d5bcc9cbdf7073b302ba8" class="avatar avatar-40 grav-hashed grav-hijack" height="40" width="40" originals="40" src-orig="https://2.gravatar.com/avatar/b61549b7568d5bcc9cbdf7073b302ba8?s=40&amp;d=identicon&amp;r=G" scale="1.5" id="grav-b61549b7568d5bcc9cbdf7073b302ba8-4">				<strong class="comment-author"><cite class="fn"><a href="http://gravatar.com/capitainabloc" rel="external nofollow" class="url">capitainabloc</a></cite></strong>				<span class="comment-date">13 octobre 2015 / 8 h 39 min</span>
+			</div>
+
+			
+			<div class="comment-content">
+				<p>Bonjour, merci de ta réponse.<br>
+je suis sur raspberry2, avec raspbian par défaut.<br>
+ce package est à jour.<br>
+Je suis vraiment newbie là dedans, et j’ai suivi ton tuto à la lettre.</p>
+<p>voilà où ca bloque:</p>
+<p>root@raspberrypi:/home/pi/chacon_send# g++ -o chacon_send chacon_send.cpp -lwiringPi<br>
+chacon_send.cpp: In function ‘int main(int, char**)’:<br>
+chacon_send.cpp:178:14: error: ‘setuid’ was not declared in this scope<br>
+  if (setuid(0))<br>
+              ^<br>
+root@raspberrypi:/home/pi/chacon_send#</p>
+<p>ce qui est bizarre, c’est que quand tu dézippe, tu indiques avoir cette info:<br>
+  inflating: chacon_send/wiringPi.h</p>
+<p>mais je ne l’ai pas, et mon dossier ne contient que chacon_send.cpp et .DS_Store.</p>
+<p>merci pour ton aide</p>
+<p id="comment-like-37" data-liked="comment-not-liked" class="comment-likes comment-not-liked"><a href="https://arno0x0x.wordpress.com/2015/04/02/rf433-outlet/?like_comment=37&amp;_wpnonce=1548c55b45" class="comment-like-link needs-login" rel="nofollow" data-blog="87270482"><span>J'aime</span></a><span id="comment-like-count-37" class="comment-like-feedback">J'aime</span></p>
+			</div>
+
+			<div class="comment-meta comment-footer">
+											</div>
+		</article><!-- #div-comment-37 -->
+
+	</li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+
+	<li id="comment-18" class="pingback even thread-odd thread-alt depth-1 highlander-comment">
+		<div class="comment-body">
+			Ping&nbsp;: <a href="https://arno0x0x.wordpress.com/2015/05/02/envoyer-sms-avec-rpi/" rel="external nofollow" class="url">Envoyez des SMS avec votre Raspberry Pi – arno0x0x</a> 		</div>
+
+	</li><!-- #comment-## -->
+		<!-- .comment-list --></ol>
+
+		
+	
+	
+					<div id="respond" class="comment-respond js">
+			<h3 id="reply-title" class="comment-reply-title">Laisser un commentaire <small><a rel="nofollow" id="cancel-comment-reply-link" href="https://arno0x0x.wordpress.com/2015/04/02/rf433-outlet/#respond" style="display:none;">Annuler la réponse.</a></small></h3>				<form action="https://arno0x0x.wordpress.com/wp-comments-post.php" method="post" id="commentform" class="comment-form" novalidate="">
+					<input type="hidden" id="highlander_comment_nonce" name="highlander_comment_nonce" value="9693e9969a"><input type="hidden" name="_wp_http_referer" value="/2015/04/02/rf433-outlet/">
+<input type="hidden" name="hc_post_as" id="hc_post_as" value="guest">
+
+<div class="comment-form-field comment-textarea">
+	
+	<div id="comment-form-comment"><textarea tabindex="-1" style="position: absolute; top: -999px; left: 0px; right: auto; bottom: auto; border: 0px; padding: 0px; box-sizing: content-box; word-wrap: break-word; overflow: hidden; transition: none; height: 0px !important; min-height: 0px !important; font-family: Arial, Helvetica, Tahoma, Verdana, sans-serif; font-size: 14px; font-weight: 400; font-style: normal; letter-spacing: 0px; text-transform: none; text-decoration: none; word-spacing: 0px; text-indent: 0px; line-height: 14px; width: 972.4px;" class="autosizejs "></textarea><textarea id="comment" name="comment" title="Entrez votre commentaire..." placeholder="Entrez votre commentaire..." style="height: 34px; overflow: hidden; word-wrap: break-word; resize: none;"></textarea></div>
+</div>
+
+<div id="comment-form-identity" style="display: none;">
+
+	<div id="comment-form-nascar">
+		<p>Entrez vos coordonnées ci-dessous ou cliquez sur une icône pour vous connecter:</p>
+		<ul>
+			<li class="selected" style="display:none;">
+				<a href="https://arno0x0x.wordpress.com/2015/04/02/rf433-outlet/#comment-form-guest" id="postas-guest" title="Visiteur">
+					<span></span>
+				</a>
+			</li>
+			<li>
+				<a href="https://arno0x0x.wordpress.com/2015/04/02/rf433-outlet/#comment-form-load-service:WordPress.com" id="postas-wordpress" title="WordPress.com">
+					<span></span>
+				</a>
+			</li>
+			<li>
+				<a href="https://arno0x0x.wordpress.com/2015/04/02/rf433-outlet/#comment-form-load-service:Twitter" id="postas-twitter" title="Twitter">
+					<span></span>
+				</a>
+			</li>
+			<li>
+				<a href="https://arno0x0x.wordpress.com/2015/04/02/rf433-outlet/#comment-form-load-service:Facebook" id="postas-facebook" title="Facebook">
+					<span></span>
+				</a>
+			</li>
+			<li>
+			<iframe id="googleplus-sign-in" name="googleplus-sign-in" src="./Commandez vos prises électriques à distance avec le Raspberry Pi – arno0x0x_files/saved_resource(8).html" width="24" height="24" scrolling="no" allowtransparency="true" seamless="seamless" frameborder="0"></iframe>
+			</li>
+		</ul>
+	</div>
+
+	<div id="comment-form-guest" class="comment-form-service selected">
+		<div class="comment-form-padder">
+			<div class="comment-form-avatar">
+<a href="https://gravatar.com/site/signup/" target="_blank">				<img src="./Commandez vos prises électriques à distance avec le Raspberry Pi – arno0x0x_files/ad516503a11cd5ca435acc9bb6523536" alt="Gravatar" width="25" class="no-grav" originals="25" src-orig="https://1.gravatar.com/avatar/ad516503a11cd5ca435acc9bb6523536?s=25&amp;d=identicon&amp;forcedefault=y&amp;r=G" scale="1.5">
+</a>			</div>
+
+				<div class="comment-form-fields">
+				<div class="comment-form-field comment-form-email">
+					<label for="email">Adresse de messagerie <span class="required">(obligatoire)</span> <span class="nopublish">(adresse strictement confidentielle)</span></label>
+					<div class="comment-form-input"><input id="email" name="email" type="email" value=""></div>
+				</div>
+				<div class="comment-form-field comment-form-author">
+					<label for="author">Nom <span class="required">(obligatoire)</span></label>
+					<div class="comment-form-input"><input id="author" name="author" type="text" value=""></div>
+				</div>
+				<div class="comment-form-field comment-form-url">
+					<label for="url">Site web</label>
+					<div class="comment-form-input"><input id="url" name="url" type="url" value=""></div>
+				</div>
+			</div>
+	
+		</div>
+	</div>
+
+	<div id="comment-form-wordpress" class="comment-form-service">
+		<div class="comment-form-padder">
+			<div class="comment-form-avatar">
+				<img src="./Commandez vos prises électriques à distance avec le Raspberry Pi – arno0x0x_files/ad516503a11cd5ca435acc9bb6523536(1)" alt="Logo WordPress.com" width="25" class="no-grav" originals="25" scale="1.5">
+			</div>
+
+				<div class="comment-form-fields">
+				<input type="hidden" name="wp_avatar" id="wordpress-avatar" class="comment-meta-wordpress" value="">
+				<input type="hidden" name="wp_user_id" id="wordpress-user_id" class="comment-meta-wordpress" value="">
+				<input type="hidden" name="wp_access_token" id="wordpress-access_token" class="comment-meta-wordpress" value="">
+				<p class="comment-form-posting-as pa-wordpress"><strong></strong> Vous commentez à l'aide de votre compte WordPress.com. <span class="comment-form-log-out">(&nbsp;<a href="javascript:HighlanderComments.doExternalLogout( &#39;wordpress&#39; );">Déconnexion</a>&nbsp;/&nbsp;<a href="https://arno0x0x.wordpress.com/2015/04/02/rf433-outlet/#" onclick="javascript:HighlanderComments.switchAccount();return false;">Changer</a>&nbsp;)</span></p>
+			</div>
+	
+		</div>
+	</div>
+
+	<div id="comment-form-twitter" class="comment-form-service">
+		<div class="comment-form-padder">
+			<div class="comment-form-avatar">
+				<img src="./Commandez vos prises électriques à distance avec le Raspberry Pi – arno0x0x_files/ad516503a11cd5ca435acc9bb6523536(1)" alt="Image Twitter" width="25" class="no-grav" originals="25" scale="1.5">
+			</div>
+
+				<div class="comment-form-fields">
+				<input type="hidden" name="twitter_avatar" id="twitter-avatar" class="comment-meta-twitter" value="">
+				<input type="hidden" name="twitter_user_id" id="twitter-user_id" class="comment-meta-twitter" value="">
+				<input type="hidden" name="twitter_access_token" id="twitter-access_token" class="comment-meta-twitter" value="">
+				<p class="comment-form-posting-as pa-twitter"><strong></strong> Vous commentez à l'aide de votre compte Twitter. <span class="comment-form-log-out">(&nbsp;<a href="javascript:HighlanderComments.doExternalLogout( &#39;twitter&#39; );">Déconnexion</a>&nbsp;/&nbsp;<a href="https://arno0x0x.wordpress.com/2015/04/02/rf433-outlet/#" onclick="javascript:HighlanderComments.switchAccount();return false;">Changer</a>&nbsp;)</span></p>
+			</div>
+	
+		</div>
+	</div>
+
+	<div id="comment-form-facebook" class="comment-form-service">
+		<div class="comment-form-padder">
+			<div class="comment-form-avatar">
+				<img src="./Commandez vos prises électriques à distance avec le Raspberry Pi – arno0x0x_files/ad516503a11cd5ca435acc9bb6523536(1)" alt="Photo Facebook" width="25" class="no-grav" originals="25" scale="1.5">
+			</div>
+
+				<div class="comment-form-fields">
+				<input type="hidden" name="fb_avatar" id="facebook-avatar" class="comment-meta-facebook" value="">
+				<input type="hidden" name="fb_user_id" id="facebook-user_id" class="comment-meta-facebook" value="">
+				<input type="hidden" name="fb_access_token" id="facebook-access_token" class="comment-meta-facebook" value="">
+				<p class="comment-form-posting-as pa-facebook"><strong></strong> Vous commentez à l'aide de votre compte Facebook. <span class="comment-form-log-out">(&nbsp;<a href="javascript:HighlanderComments.doExternalLogout( &#39;facebook&#39; );">Déconnexion</a>&nbsp;/&nbsp;<a href="https://arno0x0x.wordpress.com/2015/04/02/rf433-outlet/#" onclick="javascript:HighlanderComments.switchAccount();return false;">Changer</a>&nbsp;)</span></p>
+			</div>
+	
+		</div>
+	</div>
+
+	<div id="comment-form-googleplus" class="comment-form-service">
+		<div class="comment-form-padder">
+			<div class="comment-form-avatar">
+				<img src="./Commandez vos prises électriques à distance avec le Raspberry Pi – arno0x0x_files/ad516503a11cd5ca435acc9bb6523536(1)" alt="Photo Google+" width="25" class="no-grav" originals="25" scale="1.5">
+			</div>
+
+				<div class="comment-form-fields">
+				<input type="hidden" name="googleplus_avatar" id="googleplus-avatar" class="comment-meta-googleplus" value="">
+				<input type="hidden" name="googleplus_user_id" id="googleplus-user_id" class="comment-meta-googleplus" value="">
+				<input type="hidden" name="googleplus_access_token" id="googleplus-access_token" class="comment-meta-googleplus" value="">
+				<p class="comment-form-posting-as pa-googleplus"><strong></strong> Vous commentez à l'aide de votre compte Google+. <span class="comment-form-log-out">(&nbsp;<a href="javascript:HighlanderComments.doExternalLogout( &#39;googleplus&#39; );">Déconnexion</a>&nbsp;/&nbsp;<a href="https://arno0x0x.wordpress.com/2015/04/02/rf433-outlet/#" onclick="javascript:HighlanderComments.switchAccount();return false;">Changer</a>&nbsp;)</span></p>
+			</div>
+	
+		</div>
+	</div>
+
+
+	<div id="comment-form-load-service" class="comment-form-service">
+		<div class="comment-form-posting-as-cancel"><a href="javascript:HighlanderComments.cancelExternalWindow();">Annuler</a></div>
+		<p>Connexion à %s</p>
+	</div>
+
+</div>
+
+<script type="text/javascript">
+var highlander_expando_javascript = function(){
+	var input = document.createElement( 'input' ),
+	    comment = jQuery( '#comment' );
+
+	if ( 'placeholder' in input ) {
+		comment.attr( 'placeholder', jQuery( '.comment-textarea label' ).remove().text() );
+	}
+
+	// Expando Mode: start small, then auto-resize on first click + text length
+	jQuery( '#comment-form-identity' ).hide();
+	jQuery( '#comment-form-subscribe' ).hide();
+	jQuery( '#commentform .form-submit' ).hide();
+
+	comment.css( { 'height':'10px' } ).one( 'focus', function() {
+		var timer = setInterval( HighlanderComments.resizeCallback, 10 )
+		jQuery( this ).animate( { 'height': HighlanderComments.initialHeight } ).delay( 100 ).queue( function(n) { clearInterval( timer ); HighlanderComments.resizeCallback(); n(); } );
+		jQuery( '#comment-form-identity' ).slideDown();
+		jQuery( '#comment-form-subscribe' ).slideDown();
+		jQuery( '#commentform .form-submit' ).slideDown();
+	});
+}
+jQuery(document).ready( highlander_expando_javascript );
+</script>
+
+<div id="comment-form-subscribe" style="display: none;">
+	<p class="comment-subscription-form"><input type="checkbox" name="subscribe" id="subscribe" value="subscribe" style="width: auto;"> <label class="subscribe-label" id="subscribe-label" for="subscribe" style="display: inline;">Avertissez-moi par email des nouveaux commentaires.</label></p><p class="post-subscription-form"><input type="checkbox" name="subscribe_blog" id="subscribe_blog" value="subscribe" style="width: auto;"> <label class="subscribe-label" id="subscribe-blog-label" for="subscribe_blog" style="display: inline;">Avertissez-moi par email des nouveaux articles.</label></p></div>
+
+
+
+
+<p class="form-submit" style="display: none;"><input name="submit" type="submit" id="comment-submit" class="submit" value="Laisser un commentaire"> <input type="hidden" name="comment_post_ID" value="132" id="comment_post_ID">
+<input type="hidden" name="comment_parent" id="comment_parent" value="0">
+</p><p style="display: none;"><input type="hidden" id="akismet_comment_nonce" name="akismet_comment_nonce" value="eb94228abd"></p>
+<input type="hidden" name="genseq" value="1483882687">
+<p style="display: none;"></p>				<input type="hidden" id="ak_js" name="ak_js" value="1483882689019"></form>
+					</div><!-- #respond -->
+		<div style="clear: both"></div>
+
+</div><!-- #comments -->
+		
+		</main><!-- #main -->
+	</div><!-- #primary -->
+
+
+		</div>
+
+	<footer class="site-footer" role="contentinfo">
+		<div class="content-wrapper">
+
+			
+
+			<div class="site-credit">
+				<a href="https://wordpress.com/?ref=footer_blog">Propulsé par WordPress.com.</a>
+				
+							</div><!-- .site-credit -->
+
+		</div>
+	</footer><!-- .site-footer -->
+
+<!--  -->
+<script type="text/javascript" src="./Commandez vos prises électriques à distance avec le Raspberry Pi – arno0x0x_files/gprofiles.js"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var WPGroHo = {"my_hash":""};
+/* ]]> */
+</script>
+<script type="text/javascript" src="./Commandez vos prises électriques à distance avec le Raspberry Pi – arno0x0x_files/wpgroho.js"></script>
+
+	<script>
+		//initialize and attach hovercards to all gravatars
+		jQuery( document ).ready( function( $ ) {
+
+			if (typeof Gravatar === "undefined"){
+				return;
+			}
+
+			if ( typeof Gravatar.init !== "function" ) {
+				return;
+			}			
+
+			Gravatar.profile_cb = function( hash, id ) {
+				WPGroHo.syncProfileData( hash, id );
+			};
+			Gravatar.my_hash = WPGroHo.my_hash;
+			Gravatar.init( 'body', '#wp-admin-bar-my-account' );
+		});
+	</script>
+
+		<div style="display:none">
+	<div class="grofile-hash-map-9e037216e018c204ac6a95d38e9ea8eb">
+	</div>
+	<div class="grofile-hash-map-b0c1ddd044f73352223404ec196bdb1c">
+	</div>
+	<div class="grofile-hash-map-abfbd03434b53219defd000823b684e8">
+	</div>
+	<div class="grofile-hash-map-0b4dcc87c9c6e498096afda1781ba500">
+	</div>
+	<div class="grofile-hash-map-ca86cc508dfaf736b6f0395cea7b1ac8">
+	</div>
+	<div class="grofile-hash-map-94933ea82e4547e7459b2a44ec0d0e54">
+	</div>
+	<div class="grofile-hash-map-26f767df94f11be2b011a0a243ff91fa">
+	</div>
+	<div class="grofile-hash-map-7720eb894ec746625af3d6c06450bde0">
+	</div>
+	<div class="grofile-hash-map-b61549b7568d5bcc9cbdf7073b302ba8">
+	</div>
+	<div class="grofile-hash-map-419f1b706fdb2832ca90b865d634828d">
+	</div>
+	<div class="grofile-hash-map-9a9d6e3e7476a2105ec1d896ea00a8f9">
+	</div>
+	<div class="grofile-hash-map-c19952c59bb2e2b25f3cb81b301a3234">
+	</div>
+	<div class="grofile-hash-map-b61549b7568d5bcc9cbdf7073b302ba8">
+	</div>
+	</div>
+<script type="text/javascript">
+/* <![CDATA[ */
+var HighlanderComments = {"loggingInText":"Connexion\u2026","submittingText":"Publication d'un Commentaire\u2026","postCommentText":"Laisser un commentaire","connectingToText":"Connexion \u00e0 %s","commentingAsText":"%1$s: Vous commentez \u00e0 l'aide de votre compte %2$s.","logoutText":"Se d\u00e9connecter","loginText":"Se connecter","connectURL":"https:\/\/arno0x0x.wordpress.com\/public.api\/connect\/?action=request","logoutURL":"https:\/\/arno0x0x.wordpress.com\/wp-login.php?action=logout&_wpnonce=7697be1685","homeURL":"https:\/\/arno0x0x.wordpress.com\/","postID":"132","gravDefault":"identicon","enterACommentError":"Entrez un commentaire","enterEmailError":"Veuillez entrer votre adresse mail","invalidEmailError":"Adresse email invalide","enterAuthorError":"Veuillez entrer votre nom","gravatarFromEmail":"L\u2019image s\u2019affiche lorsque vous postez un commentaire. Cliquez pour personnaliser.","logInToExternalAccount":"Connectez-vous pour utiliser les informations li\u00e9es \u00e0 un de ces comptes:","change":"Changer","changeAccount":"Changer de compte","comment_registration":"","userIsLoggedIn":"","isJetpack":"0","text_direction":"ltr"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="./Commandez vos prises électriques à distance avec le Raspberry Pi – arno0x0x_files/saved_resource(4)"></script>
+
+	<div id="carousel-reblog-box">
+		<form action="" name="carousel-reblog">
+			<textarea id="carousel-reblog-content" name="carousel-reblog-content" placeholder="Ajoutez votre grain de sel personnel... (facultatif)"></textarea>
+			<label for="carousel-reblog-to-blog-id" id="carousel-reblog-lblogid">Publier sur</label>
+			<select name="carousel-reblog-to-blog-id" id="carousel-reblog-to-blog-id">
+						</select>
+
+			<div class="submit">
+				<span class="canceltext"><a href="" class="cancel">Annuler</a></span>
+				<input type="submit" name="carousel-reblog-submit" class="button" id="carousel-reblog-submit" value="Reblog Article">
+				<input type="hidden" id="carousel-reblog-blog-id" value="87270482">
+				<input type="hidden" id="carousel-reblog-blog-url" value="https://arno0x0x.wordpress.com">
+				<input type="hidden" id="carousel-reblog-blog-title" value="arno0x0x">
+				<input type="hidden" id="carousel-reblog-post-url" value="">
+				<input type="hidden" id="carousel-reblog-post-title" value="">
+			</div>
+
+			<input type="hidden" id="_wpnonce" name="_wpnonce" value="3bc570f109"><input type="hidden" name="_wp_http_referer" value="/2015/04/02/rf433-outlet/">		</form>
+
+		<div class="arrow"></div>
+	</div>
+
+	<script type="text/javascript">
+		window.WPCOM_sharing_counts = {"https:\/\/arno0x0x.wordpress.com\/2015\/04\/02\/rf433-outlet\/":132};
+	</script>
+		<script type="text/javascript">
+			var windowOpen;
+		jQuery(document).on( 'ready post-load', function(){
+			jQuery( 'a.share-twitter' ).on( 'click', function() {
+				if ( 'undefined' !== typeof windowOpen ){ // If there's another sharing window open, close it.
+					windowOpen.close();
+				}
+				windowOpen = window.open( jQuery(this).attr( 'href' ), 'wpcomtwitter', 'menubar=1,resizable=1,width=600,height=350' );
+				return false;
+			});
+		});
+		</script>
+				<script type="text/javascript">
+			var windowOpen;
+		jQuery(document).on( 'ready post-load', function(){
+			jQuery( 'a.share-facebook' ).on( 'click', function() {
+				if ( 'undefined' !== typeof windowOpen ){ // If there's another sharing window open, close it.
+					windowOpen.close();
+				}
+				windowOpen = window.open( jQuery(this).attr( 'href' ), 'wpcomfacebook', 'menubar=1,resizable=1,width=600,height=400' );
+				return false;
+			});
+		});
+		</script>
+				<script type="text/javascript">
+			var windowOpen;
+		jQuery(document).on( 'ready post-load', function(){
+			jQuery( 'a.share-google-plus-1' ).on( 'click', function() {
+				if ( 'undefined' !== typeof windowOpen ){ // If there's another sharing window open, close it.
+					windowOpen.close();
+				}
+				windowOpen = window.open( jQuery(this).attr( 'href' ), 'wpcomgoogle-plus-1', 'menubar=1,resizable=1,width=480,height=550' );
+				return false;
+			});
+		});
+		</script>
+		<script type="text/javascript" src="./Commandez vos prises électriques à distance avec le Raspberry Pi – arno0x0x_files/form.js"></script>
+<script type="text/javascript" src="./Commandez vos prises électriques à distance avec le Raspberry Pi – arno0x0x_files/saved_resource(5)"></script>
+<script type="text/javascript">
+	(function(){
+		var corecss = document.createElement('link');
+		var themecss = document.createElement('link');
+		var corecssurl = "https://s0.wp.com/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/styles/shCore.css?ver=3.0.9b";
+		if ( corecss.setAttribute ) {
+				corecss.setAttribute( "rel", "stylesheet" );
+				corecss.setAttribute( "type", "text/css" );
+				corecss.setAttribute( "href", corecssurl );
+		} else {
+				corecss.rel = "stylesheet";
+				corecss.href = corecssurl;
+		}
+		document.getElementsByTagName("head")[0].insertBefore( corecss, document.getElementById("syntaxhighlighteranchor") );
+		var themecssurl = "https://s0.wp.com/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/styles/shThemeDefault.css?m=1363304414h&amp;ver=3.0.9b";
+		if ( themecss.setAttribute ) {
+				themecss.setAttribute( "rel", "stylesheet" );
+				themecss.setAttribute( "type", "text/css" );
+				themecss.setAttribute( "href", themecssurl );
+		} else {
+				themecss.rel = "stylesheet";
+				themecss.href = themecssurl;
+		}
+		//document.getElementById("syntaxhighlighteranchor").appendChild(themecss);
+		document.getElementsByTagName("head")[0].insertBefore( themecss, document.getElementById("syntaxhighlighteranchor") );
+	})();
+	SyntaxHighlighter.config.strings.expandSource = '+ expand source';
+	SyntaxHighlighter.config.strings.help = '?';
+	SyntaxHighlighter.config.strings.alert = 'SyntaxHighlighter\n\n';
+	SyntaxHighlighter.config.strings.noBrush = 'Can\'t find brush for: ';
+	SyntaxHighlighter.config.strings.brushNotHtmlScript = 'Brush wasn\'t configured for html-script option: ';
+	SyntaxHighlighter.defaults['pad-line-numbers'] = false;
+	SyntaxHighlighter.defaults['toolbar'] = false;
+	SyntaxHighlighter.all();
+
+// Infinite scroll support
+jQuery( function( $ ) {
+	$( document.body ).on( 'post-load', function() {
+		SyntaxHighlighter.highlight();
+	} );
+} );
+</script>
+<link rel="stylesheet" id="all-css-0-3" href="./Commandez vos prises électriques à distance avec le Raspberry Pi – arno0x0x_files/jetpack-carousel.css" type="text/css" media="all">
+<!--[if lte IE 8]>
+<link rel='stylesheet' id='jetpack-carousel-ie8fix-css'  href='https://s1.wp.com/wp-content/mu-plugins/carousel/jetpack-carousel-ie8fix.css?m=1412618825h&#038;ver=20121024' type='text/css' media='all' />
+<![endif]-->
+<script type="text/javascript">
+/* <![CDATA[ */
+var comment_like_text = {"loading":"chargement\u2026"};
+/* ]]> */
+</script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var actionbardata = {"siteID":"87270482","siteName":"arno0x0x","siteURL":"http:\/\/arno0x0x.wordpress.com","icon":"<img alt='' src='https:\/\/s1.wp.com\/i\/void.gif' class='avatar avatar-36' height='36' width='36' \/>","canManageOptions":"","canCustomizeSite":"","isFollowing":"","themeSlug":"pub\/plane","signupURL":"https:\/\/wordpress.com\/start\/","loginURL":"https:\/\/arno0x0x.wordpress.com\/wp-login.php?redirect_to=https%3A%2F%2Farno0x0x.wordpress.com%2F2015%2F04%2F02%2Frf433-outlet%2F","themeURL":"https:\/\/wordpress.com\/themes\/plane\/","xhrURL":"https:\/\/arno0x0x.wordpress.com\/wp-admin\/admin-ajax.php","nonce":"f7a426737a","isSingular":"1","isFolded":"","isLoggedIn":"","isMobile":"","subscribeNonce":"<input type=\"hidden\" id=\"_wpnonce\" name=\"_wpnonce\" value=\"c7a0a46ce5\" \/>","referer":"https:\/\/arno0x0x.wordpress.com\/2015\/04\/02\/rf433-outlet\/","canFollow":"1","statusMessage":"","customizeLink":"https:\/\/arno0x0x.wordpress.com\/wp-admin\/customize.php?url=https%3A%2F%2Farno0x0x.wordpress.com%2F2015%2F04%2F02%2Frf433-outlet%2F","postID":"132","shortlink":"http:\/\/wp.me\/p5Ub2q-28","canEditPost":"","editLink":"https:\/\/wordpress.com\/post\/arno0x0x.wordpress.com\/132","i18n":{"view":"View site","follow":"Suivre","following":"Abonn\u00e9","edit":"Modifier","login":"Connexion","signup":"S'inscrire","customize":"Personnaliser","report":"Signaler ce contenu","themeInfo":"Obtenir le th\u00e8me: Plane","shortlink":"Copier shortlink","copied":"Copi\u00e9","followedText":"Les nouveaux articles de ce site appara\u00eetront d\u00e9sormais dans votre <a href=\"https:\/\/wordpress.com\/\">lecteur<\/a>","foldBar":"R\u00e9duire cette barre","unfoldBar":"D\u00e9velopper cette barre","editFollows":"Manage sites I follow","editSubs":"Manage subscriptions","viewReader":"View site in the Reader","subscribe":"Inscrivez-moi","enterEmail":"Entrez votre adresse mail","followers":"","alreadyUser":"Vous disposez d\u00e9j\u00e0 d\u02bcun compte WordPress ? <a href=\"https:\/\/arno0x0x.wordpress.com\/wp-login.php?redirect_to=https%3A%2F%2Farno0x0x.wordpress.com%2F2015%2F04%2F02%2Frf433-outlet%2F\">Connectez-vous maintenant.<\/a>"}};
+/* ]]> */
+</script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var jetpackCarouselStrings = {"widths":[370,700,1000,1200,1400,2000],"is_logged_in":"","lang":"fr","ajaxurl":"https:\/\/arno0x0x.wordpress.com\/wp-admin\/admin-ajax.php","nonce":"9c7e0330b3","display_exif":"0","display_geo":"1","single_image_gallery":"1","single_image_gallery_media_file":"","background_color":"black","comment":"Commentaire","post_comment":"Laisser un commentaire","write_comment":"\u00c9crire un commentaire...","loading_comments":"chargement des commentaires\u2026","download_original":"Voir <span class=\"photo-size\">{0}<span class=\"photo-size-times\">\u00d7<\/span>{1}<\/span> full size.","no_comment_text":"Veuillez ajouter du contenu \u00e0 votre commentaire.","no_comment_email":"Merci de renseigner une adresse email.","no_comment_author":"Merci de renseigner votre nom.","comment_post_error":"Une erreur s'est produite \u00e0 la publication de votre commentaire. Veuillez nous en excuser, et r\u00e9essayer dans quelques instants.","comment_approved":"Votre commentaire a \u00e9t\u00e9 approuv\u00e9.","comment_unapproved":"Votre commentaire est en attente de validation.","camera":"Appareil photo","aperture":"Ouverture","shutter_speed":"Vitesse d'obturation","focal_length":"Focale","comment_registration":"0","require_name_email":"1","login_url":"https:\/\/arno0x0x.wordpress.com\/wp-login.php?redirect_to=https%3A%2F%2Farno0x0x.wordpress.com%2F2015%2F04%2F02%2Frf433-outlet%2F","blog_id":"87270482","local_comments_commenting_as":"<fieldset><label for=\"email\">Adresse de messagerie (Requis)<\/label> <input type=\"text\" name=\"email\" class=\"jp-carousel-comment-form-field jp-carousel-comment-form-text-field\" id=\"jp-carousel-comment-form-email-field\" \/><\/fieldset><fieldset><label for=\"author\">Nom (Requis)<\/label> <input type=\"text\" name=\"author\" class=\"jp-carousel-comment-form-field jp-carousel-comment-form-text-field\" id=\"jp-carousel-comment-form-author-field\" \/><\/fieldset><fieldset><label for=\"url\">Site web<\/label> <input type=\"text\" name=\"url\" class=\"jp-carousel-comment-form-field jp-carousel-comment-form-text-field\" id=\"jp-carousel-comment-form-url-field\" \/><\/fieldset>","reblog":"Reblog","reblogged":"Reblogu\u00e9","reblog_add_thoughts":"Ajoutez votre grain de sel personnel... (facultatif)","reblogging":"Reblogging...","post_reblog":"Relais d'article","stats_query_args":"blog=87270482&v=wpcom&tz=1&user_id=0&subd=arno0x0x","is_public":"1","reblog_enabled":""};
+/* ]]> */
+</script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var sharing_js_options = {"lang":"fr","counts":"1"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="./Commandez vos prises électriques à distance avec le Raspberry Pi – arno0x0x_files/saved_resource(6)"></script><div id="actionbar" class="actnbr-pub-plane actnbr-has-follow"><ul><li class="actnbr-btn actnbr-hidden"> 			    	<a class="actnbr-action actnbr-actn-follow" href=""><svg class="gridicon gridicon__follow" height="24px" width="24px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g><path d="M23 16v2h-3v3h-2v-3h-3v-2h3v-3h2v3h3zM20 2v9h-4v3h-3v4H4c-1.1 0-2-.9-2-2V2h18zM8 13v-1H4v1h4zm3-3H4v1h7v-1zm0-2H4v1h7V8zm7-4H4v2h14V4z"></path></g></svg><span>Suivre</span></a> 			    	<div class="actnbr-popover tip tip-top-left actnbr-notice"> 			    		<div class="tip-arrow"></div> 			    		<div class="tip-inner actnbr-follow-bubble"></div> 			    	</div> 			    </li><li class="actnbr-ellipsis actnbr-hidden"> 			  <svg class="gridicon gridicon__ellipsis" height="24" width="24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g><circle cx="5" cy="12" r="2"></circle><circle cx="19" cy="12" r="2"></circle><circle cx="12" cy="12" r="2"></circle></g></svg> 			  <div class="actnbr-popover tip tip-top-left actnbr-more"> 			  	<div class="tip-arrow"></div> 			  	<div class="tip-inner"> 				  <ul> 				    <li class="actnbr-sitename actnbr-hidden"><a href="http://arno0x0x.wordpress.com/"><img alt="" src="./Commandez vos prises électriques à distance avec le Raspberry Pi – arno0x0x_files/void.gif" class="avatar avatar-36" height="36" width="36" scale="0"> arno0x0x</a></li> 				   	<li class="actnbr-folded-customize actnbr-hidden"><a href="https://arno0x0x.wordpress.com/wp-admin/customize.php?url=https%3A%2F%2Farno0x0x.wordpress.com%2F2015%2F04%2F02%2Frf433-outlet%2F"><svg class="gridicon gridicon__customize" height="20px" width="20px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g><path d="M2 6c0-1.505.78-3.08 2-4 0 .845.69 2 2 2 1.657 0 3 1.343 3 3 0 .386-.08.752-.212 1.09.74.594 1.476 1.19 2.19 1.81L8.9 11.98c-.62-.716-1.214-1.454-1.807-2.192C6.753 9.92 6.387 10 6 10c-2.21 0-4-1.79-4-4zm12.152 6.848l1.34-1.34c.607.304 1.283.492 2.008.492 2.485 0 4.5-2.015 4.5-4.5 0-.725-.188-1.4-.493-2.007L18 9l-2-2 3.507-3.507C18.9 3.188 18.225 3 17.5 3 15.015 3 13 5.015 13 7.5c0 .725.188 1.4.493 2.007L3 20l2 2 6.848-6.848c1.885 1.928 3.874 3.753 5.977 5.45l1.425 1.148 1.5-1.5-1.15-1.425c-1.695-2.103-3.52-4.092-5.448-5.977z" data-reactid=".2.1.1:0.1b.0"></path></g></svg><span>Personnaliser<span></span></span></a></li> 				    <li class="actnbr-folded-follow actnbr-hidden"><a class="actnbr-action actnbr-actn-follow" href=""><svg class="gridicon gridicon__follow" height="24px" width="24px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g><path d="M23 16v2h-3v3h-2v-3h-3v-2h3v-3h2v3h3zM20 2v9h-4v3h-3v4H4c-1.1 0-2-.9-2-2V2h18zM8 13v-1H4v1h4zm3-3H4v1h7v-1zm0-2H4v1h7V8zm7-4H4v2h14V4z"></path></g></svg><span>Suivre</span></a></li> 						<li class="actnbr-signup actnbr-hidden"><a href="https://wordpress.com/start/">S'inscrire</a></li> 				    <li class="actnbr-login actnbr-hidden"><a href="https://arno0x0x.wordpress.com/wp-login.php?redirect_to=https%3A%2F%2Farno0x0x.wordpress.com%2F2015%2F04%2F02%2Frf433-outlet%2F">Connexion</a></li> 				     				    <li class="actnbr-shortlink actnbr-hidden"><a href="http://wp.me/p5Ub2q-28">Copier shortlink</a></li> 				     				     				     				    <li class="actnbr-subs actnbr-hidden"><a href="https://subscribe.wordpress.com/">Manage subscriptions</a></li> 				    <li class="actnbr-fold actnbr-hidden"><a href="">Réduire cette barre</a></li> 			      </ul> 			    </div> 		      </div> 		    </li> 	      </ul></div>
+<script type="text/javascript">
+// <![CDATA[
+(function() {
+try{
+  if ( window.external &&'msIsSiteMode' in window.external) {
+    if (window.external.msIsSiteMode()) {
+      var jl = document.createElement('script');
+      jl.type='text/javascript';
+      jl.async=true;
+      jl.src='/wp-content/plugins/ie-sitemode/custom-jumplist.php';
+      var s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(jl, s);
+    }
+  }
+}catch(e){}
+})();
+// ]]>
+</script>		<iframe src="./Commandez vos prises électriques à distance avec le Raspberry Pi – arno0x0x_files/master.html" scrolling="no" id="likes-master" name="likes-master" style="display:none;"></iframe>
+		<div id="likes-other-gravatars"><div class="likes-text"><span>%d</span> blogueurs aiment cette page&nbsp;:</div><ul class="wpl-avatars sd-like-gravatars"></ul></div>
+		<script>
+			var _comscore = _comscore || [];
+			_comscore.push({
+				c1: "2",
+				c2: "7518284"
+			});
+			(function() {
+				var s = document.createElement("script"),
+					el = document.getElementsByTagName("script")[0];
+				s.async = true;
+				s.src = (document.location.protocol == "https:" ? "https://sb" : "http://b") + ".scorecardresearch.com/beacon.js";
+				el.parentNode.insertBefore(s, el);
+			})();
+		</script>
+		<noscript>
+			&lt;p class="robots-nocontent"&gt;&lt;img src="https://sb.scorecardresearch.com/p?c1=2&amp;c2=7518284&amp;c3=&amp;c4=&amp;c5=&amp;c6=&amp;c15=&amp;cv=2.0&amp;cj=1" alt="" style="display:none;" width="1" height="1" /&gt;&lt;/p&gt;
+		</noscript><script src="./Commandez vos prises électriques à distance avec le Raspberry Pi – arno0x0x_files/w.js" type="text/javascript" async="" defer=""></script>
+<script type="text/javascript">
+_tkq = window._tkq || [];
+_stq = window._stq || [];
+_tkq.push(['storeContext', {'blog_id':'87270482','blog_tz':'1','user_lang':'fr','blog_lang':'fr','user_id':'0'}]);
+_stq.push(['view', {'blog':'87270482','v':'wpcom','tz':'1','user_id':'0','post':'132','subd':'arno0x0x'}]);
+_stq.push(['extra', {'crypt':'UE5XaGUuOTlwaD85flAmcm1mcmZsaDhkV11YdWFnNncxc1tjZG9XVXhRZS03JixXRU5XS20tREhEZVNyNG9sW1tGMTFfME4vVGFaMFBEdi1jMi9ybmlBV2k0a19wW3ZNUlcmaXl3PVNUNF1OaW89bT0lRn5tU2wzSTZ4bUx+YzVlblZJaTJueUolP1ZzT2NSMVlTeT10cjBYfmFqJl9PbVY/Wnw5alpxbl9QfkNTd2dpWW9BR1lRMF1qQnBTNEVGZT1KLkRQV1QxP2FbNTVWfFg3RXB2Z0x+X3NseC45LFJHYj18RzAwTjZkbk4='}]);
+_stq.push([ 'clickTrackerInit', '87270482', '132' ]);
+	</script>
+<noscript>&lt;img src="https://pixel.wp.com/b.gif?v=noscript" style="height:0px;width:0px;overflow:hidden" alt="" /&gt;</noscript>
+<script>
+if ( 'object' === typeof wpcom_mobile_user_agent_info ) {
+
+	wpcom_mobile_user_agent_info.init();
+	var mobileStatsQueryString = "";
+	
+	if( false !== wpcom_mobile_user_agent_info.matchedPlatformName )
+		mobileStatsQueryString += "&x_" + 'mobile_platforms' + '=' + wpcom_mobile_user_agent_info.matchedPlatformName;
+	
+	if( false !== wpcom_mobile_user_agent_info.matchedUserAgentName )
+		mobileStatsQueryString += "&x_" + 'mobile_devices' + '=' + wpcom_mobile_user_agent_info.matchedUserAgentName;
+	
+	if( wpcom_mobile_user_agent_info.isIPad() )
+		mobileStatsQueryString += "&x_" + 'ipad_views' + '=' + 'views';
+
+	if( "" != mobileStatsQueryString ) {
+		new Image().src = document.location.protocol + '//pixel.wp.com/g.gif?v=wpcom-no-pv' + mobileStatsQueryString + '&baba=' + Math.random();
+	}
+	
+}
+</script>
+
+<div class="comment-likes-overlay" style="display: none;"></div><img src="./Commandez vos prises électriques à distance avec le Raspberry Pi – arno0x0x_files/g.gif" alt=":)" id="wpstats" scale="0"></body></html>

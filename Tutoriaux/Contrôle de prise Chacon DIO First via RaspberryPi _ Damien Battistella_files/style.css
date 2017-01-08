@@ -1,0 +1,126 @@
+/*
+Theme Name: Wifsimster
+Version: 0.1
+Description: Wordpress theme for the blog www.damien-battistella.fr
+Author: Damien BATTISTELLA
+*/
+/* Page's elements */
+@import url(css/box.css);
+/*@import url(css/scrollbar.css);*/
+@import url(css/table.css);
+@import url(css/footer.css);
+@import url(css/avatar.css);
+@import url(css/bubble.css);
+@import url(css/tag.css);
+@import url(css/timeline.css);
+@import url(css/comments.css);
+@import url(css/navbar.css);
+@import url(css/social.css);
+/* CSS for unique web page */
+/* Bootstrap */
+@import url(css/bootstrap.min.css);
+@import url(css/bootstrap-custom.css);
+/* jQuery, plugins & librairies */
+@import url(css/jquery-nivo-slider.css);
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+  background: transparent;
+  border: 0;
+  margin: 0;
+  padding: 0;
+  vertical-align: baseline;
+}
+
+body {
+  line-height: 1;
+  position: relative;
+  background-color: #E6E6E6;
+}
+
+.modal-body > p, .modal-body > pre {
+  margin: 10px 0;
+  line-height: 22px;
+}
+
+.modal-body > h1, .modal-body > h2, .modal-body > h3, .modal-body > h4 {
+  clear: both;
+  font-weight: normal;
+  font-family: "Capriola", sans-serif;
+  line-height: 42px;
+  padding: 15px 0;
+}
+
+.modal-body > ol, .modal-body > ul {
+  padding: 0 0 0 20px;
+}
+
+.modal-body > ol > li, .modal-body > ul > li {
+  line-height: 20px;
+}
+
+blockquote {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after {
+  content: '';
+  content: none;
+}
+
+del {
+  text-decoration: line-through;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+a img {
+  border: none;
+}
+
+body > .container {
+  margin-top: 15px;
+}
+
+.pull-center {
+  text-align: center;
+}
+
+.alert {
+  padding: 20px;
+  margin: 20px 0;
+  border: 1px solid #eee;
+  border-left-width: 5px;
+  border-radius: 3px;
+}
+
+.alert.alert-danger {
+  border-left-color: #ce4844;
+}
+
+.alert.alert-danger > h4 {
+  color: #ce4844;
+}
+
+.alert.alert-info {
+  border-left-color: #1b809e;
+}
+
+.alert.alert-info > h4 {
+  color: #1b809e;
+}
+
